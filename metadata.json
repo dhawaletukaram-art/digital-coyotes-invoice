@@ -1,0 +1,6 @@
+{
+  "name": "VinShare by DigiCoyotes - Agency Portal & Suite",
+  "description": "VinShare by DigiCoyotes: Client management, invoices, proposals, project history, and PHPMailer dispatch engine with Supabase backend and interactive 3D spatial graphics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
