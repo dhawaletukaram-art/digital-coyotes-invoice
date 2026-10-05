@@ -208,7 +208,7 @@ export const HistoryPage: React.FC<HistoryPageProps> = ({
                     <div className="flex items-center gap-3 pt-1 text-[11px] font-mono text-slate-400">
                       <span>Actor: <span className="text-slate-300">{item.actor}</span></span>
                       {item.amount && (
-                        <span>Amount: <span className="text-orange-400 font-bold">${item.amount.toLocaleString()}</span></span>
+                        <span>Amount: <span className="text-orange-400 font-bold">₹{item.amount.toLocaleString('en-IN')}</span></span>
                       )}
                       {item.statusBadge && (
                         <span className="text-emerald-400">[{item.statusBadge}]</span>

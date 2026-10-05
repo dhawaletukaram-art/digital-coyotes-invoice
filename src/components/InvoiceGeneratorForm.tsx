@@ -186,8 +186,8 @@ export const InvoiceGeneratorForm: React.FC<InvoiceGeneratorFormProps> = ({
 
   const handleOpenDirectGmail = () => {
     const compiled = compileInvoiceObject();
-    const plainText = `DIGITAL COYOTES — INVOICE ${compiled.invoiceNumber}\nClient: ${compiled.clientName} (${compiled.clientEmail})\nTotal: $${compiled.total.toLocaleString()}\nDue: ${compiled.dueDate}\n\nLine Items:\n${compiled.items.map(i => `- ${i.serviceTitle}: ${i.quantity} x $${i.rate.toLocaleString()} = $${i.amount.toLocaleString()}`).join('\n')}\n\nNotes:\n${compiled.notes || 'Payment terms: Due on receipt.'}`;
-    const subject = `[Digital Coyotes] Invoice ${compiled.invoiceNumber} for ${compiled.clientName} ($${compiled.total.toLocaleString()})`;
+    const plainText = `DIGITAL COYOTES — INVOICE ${compiled.invoiceNumber}\nClient: ${compiled.clientName} (${compiled.clientEmail})\nTotal: ${currency}${compiled.total.toLocaleString('en-IN')}\nDue: ${compiled.dueDate}\n\nLine Items:\n${compiled.items.map(i => `- ${i.serviceTitle}: ${i.quantity} x ${currency}${i.rate.toLocaleString('en-IN')} = ${currency}${i.amount.toLocaleString('en-IN')}`).join('\n')}\n\nNotes:\n${compiled.notes || 'Payment terms: Due on receipt.'}`;
+    const subject = `[Digital Coyotes] Invoice ${compiled.invoiceNumber} for ${compiled.clientName} (${currency}${compiled.total.toLocaleString('en-IN')})`;
     openInGmailCompose(compiled.clientEmail || 'thedigitalcoyotes@gmail.com', subject, plainText, 'thedigitalcoyotes@gmail.com');
   };
 
@@ -225,14 +225,14 @@ export const InvoiceGeneratorForm: React.FC<InvoiceGeneratorFormProps> = ({
 
         {/* Action Buttons: Save, Versions, Email, Download PDF */}
         <div className="flex flex-wrap items-center gap-2">
-          {/* Currency Toggle */}
-          <button
-            onClick={() => setCurrency(c => c === '₹' ? '$' : '₹')}
-            className="px-2.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono font-bold text-orange-400 hover:bg-slate-800 transition-colors cursor-pointer"
-            title="Toggle currency symbol"
+          {/* Currency Display */}
+          <div
+            className="px-2.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono font-bold text-orange-400 flex items-center gap-1.5 shadow-sm"
+            title="Billing Currency: Indian Rupees (INR)"
           >
-            {currency} Currency
-          </button>
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+            <span>₹ INR (Rupees)</span>
+          </div>
 
           <button
             onClick={handleSave}
@@ -436,7 +436,7 @@ export const InvoiceGeneratorForm: React.FC<InvoiceGeneratorFormProps> = ({
                     </div>
 
                     <div className="space-y-0.5">
-                      <span className="text-[10px] font-mono text-slate-400 block uppercase">RATE</span>
+                      <span className="text-[10px] font-mono text-slate-400 block uppercase">RATE ({currency})</span>
                       <input
                         type="number"
                         min="0"
@@ -624,13 +624,13 @@ export const InvoiceGeneratorForm: React.FC<InvoiceGeneratorFormProps> = ({
                           {item.quantity}
                         </td>
                         <td className="py-2.5 px-3 text-right font-mono text-slate-700">
-                          {currency}{item.rate.toLocaleString()}
+                          {currency}{item.rate.toLocaleString('en-IN')}
                         </td>
                         <td className="py-2.5 px-2 text-center font-mono text-slate-500 text-[11px]">
                           {item.taxPercent || 0}%
                         </td>
                         <td className="py-2.5 px-3 text-right font-mono font-bold text-slate-900">
-                          {currency}{item.amount.toLocaleString()}
+                          {currency}{item.amount.toLocaleString('en-IN')}
                         </td>
                       </tr>
                     ))}
@@ -654,17 +654,17 @@ export const InvoiceGeneratorForm: React.FC<InvoiceGeneratorFormProps> = ({
                 <div className="space-y-1.5 text-xs font-mono text-right">
                   <div className="flex justify-between text-slate-600">
                     <span className="text-slate-400">Subtotal</span>
-                    <span>{currency}{subtotal.toLocaleString()}</span>
+                    <span>{currency}{subtotal.toLocaleString('en-IN')}</span>
                   </div>
                   {totalDiscount > 0 && (
                     <div className="flex justify-between text-emerald-600">
                       <span>Discount</span>
-                      <span>-{currency}{Math.round(totalDiscount).toLocaleString()}</span>
+                      <span>-{currency}{Math.round(totalDiscount).toLocaleString('en-IN')}</span>
                     </div>
                   )}
                   <div className="flex justify-between text-slate-600">
                     <span className="text-slate-400">Tax</span>
-                    <span>+{currency}{Math.round(totalTax).toLocaleString()}</span>
+                    <span>+{currency}{Math.round(totalTax).toLocaleString('en-IN')}</span>
                   </div>
 
                   {/* Big Vibrant TOTAL DUE pill from screenshot */}
@@ -672,7 +672,7 @@ export const InvoiceGeneratorForm: React.FC<InvoiceGeneratorFormProps> = ({
                     <div className="inline-flex items-center justify-between w-full py-2 px-3 rounded-xl bg-gradient-to-r from-blue-600 to-emerald-500 text-white font-bold shadow-md">
                       <span className="text-xs uppercase font-mono tracking-wider">TOTAL DUE</span>
                       <span className="text-sm font-mono tracking-tight font-extrabold">
-                        {currency}{grandTotal.toLocaleString()}
+                        {currency}{grandTotal.toLocaleString('en-IN')}
                       </span>
                     </div>
                   </div>

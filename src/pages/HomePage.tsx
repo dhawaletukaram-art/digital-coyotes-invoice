@@ -265,7 +265,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   <div>
                     <span className="text-[10px] uppercase text-slate-400 font-mono block">From</span>
                     <span className="text-sm font-bold text-white font-mono tabular-nums">
-                      ${service.startingRate.toLocaleString()}
+                      ₹{service.startingRate.toLocaleString('en-IN')}
                     </span>
                   </div>
 

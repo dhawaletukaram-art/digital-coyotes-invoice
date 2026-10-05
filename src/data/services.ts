@@ -8,7 +8,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'Comprehensive brand identity systems, guidelines, and omni-channel social presence.',
     fullDescription: 'We build resonant brand identities from visual language to tone of voice, paired with active social channel architecture to dominate mindshare.',
     typicalDeliverables: ['Brand Guidelines', 'Social Asset Kit', 'Typography & Palette System', 'Voice & Tone Guide'],
-    startingRate: 3500,
+    startingRate: 85000,
     duration: '3-4 weeks',
     isPopular: true
   },
@@ -19,7 +19,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'Technical SEO audits, programmatic keyword architecture, and organic page-one dominance.',
     fullDescription: 'Holistic SEO strategy covering Core Web Vitals, entity graph indexing, high-intent backlink strategies, and conversion-focused content.',
     typicalDeliverables: ['Technical SEO Audit', 'Keyword Matrix', 'Schema / Structured Data', 'Monthly Ranking Reports'],
-    startingRate: 2200,
+    startingRate: 45000,
     duration: 'Ongoing / Monthly'
   },
   {
@@ -29,7 +29,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'Modern, high-performance web applications and marketing flagships engineered for speed.',
     fullDescription: 'Full-stack web engineering using React, Next.js, PHP/Laravel, and modern serverless stacks with zero-latency UX and sub-second load times.',
     typicalDeliverables: ['Custom Codebase', 'Responsive Layouts', 'CMS / Backend Integration', 'CI/CD Pipeline Setup'],
-    startingRate: 4800,
+    startingRate: 120000,
     duration: '4-6 weeks',
     isPopular: true
   },
@@ -40,7 +40,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'Precision PPC, Meta, LinkedIn, and YouTube campaigns driven by performance ROAS.',
     fullDescription: 'Algorithmic performance advertising with multi-variant ad creative testing, custom audience modeling, and conversion rate optimization.',
     typicalDeliverables: ['Ad Creative Matrix', 'Pixel & Tracking Setup', 'Audience Funnels', 'Weekly ROAS Dashboards'],
-    startingRate: 2800,
+    startingRate: 65000,
     duration: 'Ongoing / Monthly',
     isPopular: true
   },
@@ -51,7 +51,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'Multi-vendor marketplace engineering, merchant onboardings, and payment gateway automation.',
     fullDescription: 'End-to-end seller platform architecture including escrow integrations, vendor dashboards, commission settlement, and dispute handling.',
     typicalDeliverables: ['Vendor Portal', 'Escrow / Stripe Connect Setup', 'Product Catalog Engine', 'Payout Automation'],
-    startingRate: 6500,
+    startingRate: 150000,
     duration: '6-8 weeks'
   },
   {
@@ -61,7 +61,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'Targeted creator partnerships, contract negotiation, and viral advocacy campaigns.',
     fullDescription: 'Connecting high-growth brands with vetted creators across TikTok, YouTube, and Instagram with measurable tracking and licensing agreements.',
     typicalDeliverables: ['Creator Outreach List', 'Partnership Briefs', 'Deliverable Verification', 'UGC Content Rights'],
-    startingRate: 3200,
+    startingRate: 75000,
     duration: '3-4 weeks'
   },
   {
@@ -71,7 +71,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'Studio photography, 3D CGI rendering, motion design, and high-impact digital collateral.',
     fullDescription: 'Commercial-grade visual assets designed to stop the scroll, elevate prestige, and drive qualified conversions across all brand touchpoints.',
     typicalDeliverables: ['CGI Product Renders', 'High-Res Photo Suite', 'Social Storyboard Reels', 'Vector Graphics'],
-    startingRate: 4200,
+    startingRate: 95000,
     duration: '2-3 weeks'
   },
   {
@@ -81,7 +81,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'Editorial copywriting, technical whitepapers, case studies, and brand storytelling.',
     fullDescription: 'Strategic written content tuned for both human engagement and search crawler depth, turning complex offerings into persuasive narratives.',
     typicalDeliverables: ['Authority Articles', 'Whitepapers', 'Email Nurture Sequences', 'Product Copy'],
-    startingRate: 1800,
+    startingRate: 35000,
     duration: '2 weeks'
   },
   {
@@ -91,7 +91,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'Pixel-perfect wireframes, Figma design systems, interactive prototypes, and usability testing.',
     fullDescription: 'Deep user research paired with modern interaction paradigms, creating frictionless product journeys with micro-interactions and atomic design.',
     typicalDeliverables: ['Figma Design System', 'Clickable Prototype', 'User Journey Maps', 'Developer Handoff Specs'],
-    startingRate: 4500,
+    startingRate: 110000,
     duration: '3-5 weeks',
     isPopular: true
   },
@@ -102,7 +102,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'Custom LLM fine-tuning, RAG pipelines, prompt engineering, and multimodal AI workflows.',
     fullDescription: 'Deploying state-of-the-art foundation models directly into your business logic for automated customer workflows, creative synthesis, and document reasoning.',
     typicalDeliverables: ['RAG Knowledge Base', 'Model API Endpoints', 'Embeddings Vector DB', 'Custom Agent Logic'],
-    startingRate: 5800,
+    startingRate: 145000,
     duration: '4-6 weeks',
     isPopular: true
   },
@@ -113,7 +113,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'Autonomous intelligent agents, automated reasoning engines, and custom cognitive tools.',
     fullDescription: 'Enterprise AI software engineering combining deterministic API orchestration with probabilistic neural models for high-reliability systems.',
     typicalDeliverables: ['Custom AI Microservices', 'Prompt Validation Suite', 'Evaluation Benchmark', 'Production Deployment'],
-    startingRate: 7200,
+    startingRate: 180000,
     duration: '6-8 weeks'
   },
   {
@@ -123,7 +123,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'Native iOS/Android and Flutter/React Native applications with offline-first synchronization.',
     fullDescription: 'High-polish mobile experiences with fluid gestures, biometric security, real-time push messaging, and App Store / Google Play compliance.',
     typicalDeliverables: ['Cross-Platform App', 'Push Notification Engine', 'App Store Submission', 'Crash Analytics'],
-    startingRate: 6800,
+    startingRate: 165000,
     duration: '6-10 weeks'
   },
   {
@@ -133,7 +133,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'Predictive modeling, computer vision, anomaly detection, and custom neural architectures.',
     fullDescription: 'End-to-end MLOps from clean training dataset curation to inference optimization, drift monitoring, and edge execution.',
     typicalDeliverables: ['Trained ML Models', 'Inference Pipeline', 'Drift Monitoring Hooks', 'Validation Report'],
-    startingRate: 8500,
+    startingRate: 210000,
     duration: '8-12 weeks'
   },
   {
@@ -143,7 +143,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'Modern data stack setup, Looker/Tableau dashboards, cohort tracking, and attribution models.',
     fullDescription: 'Transforming chaotic operational databases into crystal-clear executive dashboards, revenue funnels, and predictive retention insights.',
     typicalDeliverables: ['Automated ETL Pipeline', 'Executive BI Dashboard', 'Cohort Retention Models', 'SQL Warehouse Views'],
-    startingRate: 3600,
+    startingRate: 85000,
     duration: '3-4 weeks'
   },
   {
@@ -153,7 +153,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'Smart contract development, tokenomics modeling, and secure decentralized dApps.',
     fullDescription: 'EVM smart contract engineering, audited token contracts, gas-optimized decentralized applications, and wallet connector UX.',
     typicalDeliverables: ['Audited Smart Contracts', 'Web3 DApp Frontend', 'Tokenomics Blueprint', 'Testnet Deployment'],
-    startingRate: 7500,
+    startingRate: 175000,
     duration: '5-7 weeks'
   },
   {
@@ -163,7 +163,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'Modernizing legacy workflows, ERP migrations, and automated enterprise system integrations.',
     fullDescription: 'Strategic overhaul of manual paper or legacy systems into streamlined cloud-native software architectures that scale effortlessly.',
     typicalDeliverables: ['Legacy Architecture Audit', 'Migration Roadmap', 'Custom Middleware / APIs', 'Staff Training Manual'],
-    startingRate: 9500,
+    startingRate: 240000,
     duration: '8-14 weeks'
   },
   {
@@ -173,7 +173,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'Cinematic brand films, product reveal videos, 3D motion graphics, and commercial editing.',
     fullDescription: 'High-end corporate videography, kinetic typography, sound design, and color grading crafted to showcase premium value.',
     typicalDeliverables: ['4K Master Commercial Cut', 'Social Cutdowns (9:16 & 1:1)', 'Sound Design & SFX', 'Color Grading Master'],
-    startingRate: 4800,
+    startingRate: 115000,
     duration: '3-4 weeks'
   },
   {
@@ -183,7 +183,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'PHPMailer & automated lifecycle email sequences, deliverability optimization, and newsletters.',
     fullDescription: 'Behavioral email workflows, automated invoice / proposal alerts, cold outreach deliverability tuning, and conversion-optimized template design.',
     typicalDeliverables: ['HTML Email Templates', 'Automated Lifecycle Flows', 'SPF/DKIM/DMARC Setup', 'A/B Testing Matrix'],
-    startingRate: 2400,
+    startingRate: 55000,
     duration: '2-3 weeks',
     isPopular: true
   },
@@ -194,7 +194,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'Tier-1 press coverage, media kits, press releases, and executive personal branding.',
     fullDescription: 'Targeted media relations placing founders and breakthrough products in industry-defining publications and podcast appearances.',
     typicalDeliverables: ['Media Pitch Deck', 'Syndicated Press Releases', 'Journalist Outreach', 'Coverage Dossier'],
-    startingRate: 4500,
+    startingRate: 95000,
     duration: 'Ongoing / Monthly'
   },
   {
@@ -204,7 +204,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'High-converting custom Shopify / WooCommerce / headless commerce engines.',
     fullDescription: 'Blazing fast storefronts featuring dynamic cart upsells, localized multi-currency checkouts, inventory syncing, and frictionless payment options.',
     typicalDeliverables: ['Headless Storefront', 'Checkout Funnel Optimization', 'Inventory & ERP Sync', 'Payment Gateway Integration'],
-    startingRate: 6200,
+    startingRate: 155000,
     duration: '5-7 weeks',
     isPopular: true
   },
@@ -215,7 +215,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'Avant-garde logo systems, 3D emblem design, typography curation, and packaging art.',
     fullDescription: 'Distinctive, world-class identity design that stands out instantly in crowded markets, complete with physical and digital brand touchpoints.',
     typicalDeliverables: ['3D Vector Logo Suite', 'Packaging Mockups', 'Print Spec Collateral', 'Iconography Library'],
-    startingRate: 3900,
+    startingRate: 90000,
     duration: '3-4 weeks'
   },
   {
@@ -225,7 +225,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'Viral product launch orchestration across interactive web, social, and experiential media.',
     fullDescription: 'Coordinated digital blitzes combining interactive landing pages, algorithmic social drops, PR outreach, and high-energy countdowns.',
     typicalDeliverables: ['Campaign Microsite', 'Multi-Platform Ad Drops', 'Influencer Seeding', 'Real-time Analytics'],
-    startingRate: 5200,
+    startingRate: 125000,
     duration: '4 weeks'
   },
   {
@@ -235,7 +235,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'High-fidelity motion posters, thought leadership micro-videos, and brand manifestos.',
     fullDescription: 'Emotionally resonant, culturally aware multimedia assets crafted to inspire trust, ignite conversation, and convert followers into advocates.',
     typicalDeliverables: ['Brand Manifesto Video', 'Thought Leadership Deck', 'Carousel Micro-Guides', 'Audio Identity'],
-    startingRate: 3100,
+    startingRate: 70000,
     duration: '2-3 weeks'
   },
   {
@@ -245,7 +245,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: 'Go-to-market roadmaps, competitor moats, pricing psychology, and unit economics audit.',
     fullDescription: 'Advisory and strategic execution for ambitious brands looking to scale from seed to venture or $1M to $10M ARR with predictable unit economics.',
     typicalDeliverables: ['GTM Master Blueprint', 'Pricing Architecture Matrix', 'Competitor Moat Analysis', 'Quarterly Growth OKRs'],
-    startingRate: 6000,
+    startingRate: 140000,
     duration: '4-6 weeks'
   },
   {
@@ -255,7 +255,7 @@ export const DIGICOYOTES_SERVICES: ServiceItem[] = [
     shortDescription: '3D WebGL scenes, smooth scroll kinetics, and modern architectural redesigns.',
     fullDescription: 'Transforming tired, sluggish websites into unforgettable digital flagship experiences featuring Three.js spatial elements and fluid motion.',
     typicalDeliverables: ['Interactive 3D Elements', 'Complete UI Redesign', 'PageSpeed 95+ Score', 'Full Content Migration'],
-    startingRate: 5400,
+    startingRate: 135000,
     duration: '4-6 weeks',
     isPopular: true
   }

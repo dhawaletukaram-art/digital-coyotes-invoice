@@ -236,24 +236,25 @@ class SupabaseService {
 
 // Client-side dispatcher that executes PHPMailer flow with real backend SMTP dispatch
 export async function sendInvoiceViaPhpMailer(invoice: Invoice, config: SmtpConfig): Promise<PhpMailerSendResult> {
+  const cur = invoice.currency || '₹';
   const recipient = invoice.clientEmail || 'thedigitalcoyotes@gmail.com';
   const ccRecipient = 'thedigitalcoyotes@gmail.com';
   const messageId = `<inv-${invoice.id}-${Date.now()}@${config.host || 'gmail.com'}>`;
-  const subject = `[Digital Coyotes] Invoice ${invoice.invoiceNumber} for ${invoice.clientName} ($${invoice.total.toLocaleString()})`;
+  const subject = `[Digital Coyotes] Invoice ${invoice.invoiceNumber} for ${invoice.clientName} (${cur}${invoice.total.toLocaleString('en-IN')})`;
 
   const plainText = `DIGITAL COYOTES — INVOICE ${invoice.invoiceNumber}
 Client: ${invoice.clientName} (${invoice.clientEmail})
 Issue Date: ${invoice.issueDate}
 Due Date: ${invoice.dueDate}
-Total Amount: $${invoice.total.toLocaleString()}
+Total Amount: ${cur}${invoice.total.toLocaleString('en-IN')}
 
 LINE ITEMS:
-${invoice.items.map(i => `- ${i.serviceTitle}: ${i.quantity} x $${i.rate.toLocaleString()} = $${i.amount.toLocaleString()} (${i.description})`).join('\n')}
+${invoice.items.map(i => `- ${i.serviceTitle}: ${i.quantity} x ${cur}${i.rate.toLocaleString('en-IN')} = ${cur}${i.amount.toLocaleString('en-IN')} (${i.description})`).join('\n')}
 
-Subtotal: $${invoice.subtotal.toLocaleString()}
-Tax: ${invoice.taxRate}% ($${(invoice.taxAmount || 0).toLocaleString()})
-Discount: $${(invoice.discount || 0).toLocaleString()}
-TOTAL DUE: $${invoice.total.toLocaleString()}
+Subtotal: ${cur}${invoice.subtotal.toLocaleString('en-IN')}
+Tax: ${invoice.taxRate}% (${cur}${(invoice.taxAmount || 0).toLocaleString('en-IN')})
+Discount: ${cur}${(invoice.discount || 0).toLocaleString('en-IN')}
+TOTAL DUE: ${cur}${invoice.total.toLocaleString('en-IN')}
 
 Notes:
 ${invoice.notes || 'Payment terms: Due upon receipt.'}
@@ -290,15 +291,15 @@ Dispatched by Digital Coyotes Agency Portal (https://digicoyotes2026.vercel.app)
       <tr style="border-bottom: 1px solid #1e293b;">
         <td style="padding: 10px; color: #ffffff;">${i.serviceTitle}<br/><span style="color:#64748b; font-size:11px;">${i.description}</span></td>
         <td style="padding: 10px; text-align: center; color: #cbd5e1;">${i.quantity}</td>
-        <td style="padding: 10px; text-align: right; color: #cbd5e1;">$${i.rate.toLocaleString()}</td>
-        <td style="padding: 10px; text-align: right; color: #f97316; font-weight: bold;">$${i.amount.toLocaleString()}</td>
+        <td style="padding: 10px; text-align: right; color: #cbd5e1;">${cur}${i.rate.toLocaleString('en-IN')}</td>
+        <td style="padding: 10px; text-align: right; color: #f97316; font-weight: bold;">${cur}${i.amount.toLocaleString('en-IN')}</td>
       </tr>
       `).join('')}
     </tbody>
     <tfoot>
       <tr style="background: #131b2e; font-weight: bold;">
         <td colspan="3" style="padding: 12px; color: #ffffff; font-size: 15px;">Total Balance Due</td>
-        <td style="padding: 12px; text-align: right; color: #22c55e; font-size: 17px;">$${invoice.total.toLocaleString()}</td>
+        <td style="padding: 12px; text-align: right; color: #22c55e; font-size: 17px;">${cur}${invoice.total.toLocaleString('en-IN')}</td>
       </tr>
     </tfoot>
   </table>
@@ -358,7 +359,7 @@ Dispatched by Digital Coyotes Agency Portal (https://digicoyotes2026.vercel.app)
     smtpHost: `${config.host || 'smtp.gmail.com'}:${config.port || 587}`,
     response: realDispatched ? `250 OK (ID: ${messageId})` : `Queued: ${serverMessage}`,
     phpMailerHeader: 'PHPMailer 6.9.1 / Gmail Relay Engine',
-    bodySnippet: `Invoice ${invoice.invoiceNumber} for $${invoice.total.toLocaleString()}`
+    bodySnippet: `Invoice ${invoice.invoiceNumber} for ${cur}${invoice.total.toLocaleString('en-IN')}`
   };
 
   const createdLog = await recordMailLog(logData);
@@ -375,7 +376,7 @@ Dispatched by Digital Coyotes Agency Portal (https://digicoyotes2026.vercel.app)
     title: realDispatched 
       ? `PHPMailer Dispatched: Invoice ${invoice.invoiceNumber}`
       : `Invoice Queued for Dispatch: ${invoice.invoiceNumber}`,
-    description: `Invoice for $${invoice.total.toLocaleString()} (${invoice.clientName}). ${serverMessage}`,
+    description: `Invoice for ${cur}${invoice.total.toLocaleString('en-IN')} (${invoice.clientName}). ${serverMessage}`,
     referenceId: invoice.id,
     actor: realDispatched ? 'Gmail SMTP Relay' : 'Invoice Console',
     statusBadge: realDispatched ? 'Sent' : 'Queued',
@@ -395,9 +396,10 @@ Dispatched by Digital Coyotes Agency Portal (https://digicoyotes2026.vercel.app)
 }
 
 export async function sendProposalViaPhpMailer(proposal: Proposal, config: SmtpConfig): Promise<PhpMailerSendResult> {
+  const cur = proposal.currency || '₹';
   const proposalArchiveEmail = 'thedigitalcoyotes@gmail.com';
   const messageId = `<prop-${proposal.id}-${Date.now()}@${config.host || 'gmail.com'}>`;
-  const subject = `[Digital Coyotes] Agency Proposal: ${proposal.title} ($${proposal.totalValue.toLocaleString()})`;
+  const subject = `[Digital Coyotes] Agency Proposal: ${proposal.title} (${cur}${proposal.totalValue.toLocaleString('en-IN')})`;
 
   const plainText = `DIGITAL COYOTES — AGENCY PROPOSAL
 Proposal Number: ${proposal.proposalNumber}
@@ -405,7 +407,7 @@ Client: ${proposal.clientName} (${proposal.clientEmail})
 Address: ${proposal.clientAddress || 'N/A'}
 Title: ${proposal.title}
 Valid Until: ${proposal.validUntil}
-Total Investment: $${proposal.totalValue.toLocaleString()}
+Total Investment: ${cur}${proposal.totalValue.toLocaleString('en-IN')}
 
 SUMMARY & OVERVIEW:
 ${proposal.summary || ''}
@@ -414,7 +416,7 @@ SECTIONS & SCOPE:
 ${(proposal.sections || []).map(s => `[${s.title}]\n${s.content}\n`).join('\n')}
 
 INVESTMENT & DELIVERABLES:
-${(proposal.pricingItems && proposal.pricingItems.length > 0 ? proposal.pricingItems : proposal.milestones).map((item: any) => `- ${item.title || item.deliverable}: $${(item.amount || item.cost || 0).toLocaleString()}`).join('\n')}
+${(proposal.pricingItems && proposal.pricingItems.length > 0 ? proposal.pricingItems : proposal.milestones).map((item: any) => `- ${item.title || item.deliverable}: ${cur}${(item.amount || item.cost || 0).toLocaleString('en-IN')}`).join('\n')}
 
 TERMS & CONDITIONS:
 ${proposal.terms || 'Payment terms: Due within 15 days of invoice date.'}
@@ -462,14 +464,14 @@ Dispatched by Digital Coyotes Agency Portal (https://digicoyotes2026.vercel.app)
         ${(proposal.pricingItems && proposal.pricingItems.length > 0 ? proposal.pricingItems : proposal.milestones).map((item: any) => `
         <tr style="border-bottom: 1px solid #1e293b;">
           <td style="padding: 10px; color: #f1f5f9;">${item.title || item.deliverable}</td>
-          <td style="padding: 10px; text-align: right; color: #f97316; font-weight: bold;">$${(item.amount || item.cost || 0).toLocaleString()}</td>
+          <td style="padding: 10px; text-align: right; color: #f97316; font-weight: bold;">${cur}${(item.amount || item.cost || 0).toLocaleString('en-IN')}</td>
         </tr>
         `).join('')}
       </tbody>
       <tfoot>
         <tr style="background: #131b2e; font-weight: bold;">
           <td style="padding: 12px; color: #ffffff; font-size: 15px;">Total Investment</td>
-          <td style="padding: 12px; text-align: right; color: #22c55e; font-size: 17px;">$${proposal.totalValue.toLocaleString()}</td>
+          <td style="padding: 12px; text-align: right; color: #22c55e; font-size: 17px;">${cur}${proposal.totalValue.toLocaleString('en-IN')}</td>
         </tr>
       </tfoot>
     </table>
@@ -548,7 +550,7 @@ Dispatched by Digital Coyotes Agency Portal (https://digicoyotes2026.vercel.app)
       ? `250 2.0.0 Ok: queued via PHPMailer to ${proposalArchiveEmail} (ID: ${messageId})`
       : `Queued: ${serverMessage}. Ready for Gmail compose.`,
     phpMailerHeader: 'PHPMailer 6.9.1 (Digital Coyotes Engine)',
-    bodySnippet: `Proposal ${proposal.proposalNumber}: "${proposal.title}" ($${proposal.totalValue.toLocaleString()})`
+    bodySnippet: `Proposal ${proposal.proposalNumber}: "${proposal.title}" (${cur}${proposal.totalValue.toLocaleString('en-IN')})`
   };
 
   const createdLog = await recordMailLog(logData);
@@ -566,7 +568,7 @@ Dispatched by Digital Coyotes Agency Portal (https://digicoyotes2026.vercel.app)
       ? `PHPMailer Dispatched: Proposal ${proposal.proposalNumber}`
       : `Proposal Ready for Mail Dispatch: ${proposal.proposalNumber}`,
     description: realDispatched 
-      ? `Delivered proposal "${proposal.title}" ($${proposal.totalValue.toLocaleString()}) to ${proposalArchiveEmail} via PHPMailer.`
+      ? `Delivered proposal "${proposal.title}" (${cur}${proposal.totalValue.toLocaleString('en-IN')}) to ${proposalArchiveEmail} via PHPMailer.`
       : `Proposal "${proposal.title}" queued. ${serverMessage}`,
     referenceId: proposal.id,
     actor: realDispatched ? 'PHPMailer v6.9 Engine' : 'Proposal Dispatcher',

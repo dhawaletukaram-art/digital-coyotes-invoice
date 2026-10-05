@@ -294,13 +294,13 @@ export const ProposalPage: React.FC<ProposalPageProps> = ({
         <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
           <span className="text-xs text-slate-400 block font-mono">Total Pipeline Value</span>
           <span className="text-xl font-bold text-white font-mono tabular-nums">
-            ${totalPipeline.toLocaleString()}
+            ₹{totalPipeline.toLocaleString('en-IN')}
           </span>
         </div>
         <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
           <span className="text-xs text-slate-400 block font-mono">Approved Contracts</span>
           <span className="text-xl font-bold text-emerald-400 font-mono tabular-nums">
-            ${approvedTotal.toLocaleString()}
+            ₹{approvedTotal.toLocaleString('en-IN')}
           </span>
         </div>
         <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
@@ -399,7 +399,7 @@ export const ProposalPage: React.FC<ProposalPageProps> = ({
                       {proposal.milestones.length} Milestones
                     </span>
                     <span className="font-mono font-bold text-lg text-white tabular-nums">
-                      ${proposal.totalValue.toLocaleString()}
+                      ₹{proposal.totalValue.toLocaleString('en-IN')}
                     </span>
                   </div>
                 </div>
@@ -604,7 +604,7 @@ export const ProposalPage: React.FC<ProposalPageProps> = ({
 
                         <div className="sm:col-span-3 space-y-1">
                           <div className="flex items-center justify-between">
-                            <label className="text-[11px] text-slate-400">Cost ($)</label>
+                            <label className="text-[11px] text-slate-400">Cost (₹)</label>
                             {formMilestones.length > 1 && (
                               <button
                                 type="button"
@@ -641,7 +641,7 @@ export const ProposalPage: React.FC<ProposalPageProps> = ({
               <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800 flex items-center justify-between font-mono">
                 <span className="text-slate-400">Total Contract Valuation:</span>
                 <span className="text-xl font-bold text-orange-400 tabular-nums">
-                  ${totalValue.toLocaleString()}
+                  ₹{totalValue.toLocaleString('en-IN')}
                 </span>
               </div>
 
@@ -785,7 +785,7 @@ export const ProposalPage: React.FC<ProposalPageProps> = ({
                         <p className="text-[11px] text-slate-400">{m.deliverable}</p>
                       </div>
                       <div className="font-mono font-bold text-white text-sm whitespace-nowrap text-right">
-                        ${m.cost.toLocaleString()}
+                        ₹{m.cost.toLocaleString('en-IN')}
                       </div>
                     </div>
                   ))}
@@ -799,7 +799,7 @@ export const ProposalPage: React.FC<ProposalPageProps> = ({
                   <span className="text-xs text-slate-400">Milestone phased payment schedule</span>
                 </div>
                 <div className="text-2xl font-bold font-mono text-white tabular-nums">
-                  ${viewingProposal.totalValue.toLocaleString()}
+                  ₹{viewingProposal.totalValue.toLocaleString('en-IN')}
                 </div>
               </div>
             </div>

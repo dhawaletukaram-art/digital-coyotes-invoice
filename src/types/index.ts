@@ -11,7 +11,7 @@ export interface ServiceItem {
   shortDescription: string;
   fullDescription: string;
   typicalDeliverables: string[];
-  startingRate: number; // in USD
+  startingRate: number; // in INR (₹ Indian Rupees)
   duration: string;
   isPopular?: boolean;
 }

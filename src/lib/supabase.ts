@@ -63,6 +63,24 @@ export function resetSupabaseClient(config: SupabaseConfig) {
 }
 
 // Local Storage helpers
+const INR_MIGRATION_KEY = 'dc_inr_currency_v2';
+function runInrMigrationIfNeeded(): void {
+  try {
+    if (typeof window !== 'undefined' && window.localStorage) {
+      if (localStorage.getItem(INR_MIGRATION_KEY) !== 'migrated') {
+        localStorage.removeItem(STORAGE_KEYS.CLIENTS);
+        localStorage.removeItem(STORAGE_KEYS.INVOICES);
+        localStorage.removeItem(STORAGE_KEYS.PROPOSALS);
+        localStorage.removeItem(STORAGE_KEYS.HISTORY);
+        localStorage.setItem(INR_MIGRATION_KEY, 'migrated');
+      }
+    }
+  } catch (e) {
+    // safely ignore storage exceptions
+  }
+}
+runInrMigrationIfNeeded();
+
 function getFromStorage<T>(key: string, fallback: T): T {
   try {
     const raw = localStorage.getItem(key);

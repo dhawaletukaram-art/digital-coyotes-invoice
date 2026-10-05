@@ -141,7 +141,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({
       'Location',
       'Status',
       'Subscribed Services',
-      'Total Billed (USD)',
+      'Total Billed (INR)',
       'Created At',
       'Notes'
     ];
@@ -222,7 +222,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({
         <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
           <span className="text-xs text-slate-400 block font-mono">Cumulative Agency Invoicing</span>
           <span className="text-xl font-bold text-emerald-400 font-mono tabular-nums">
-            ${totalBilledAll.toLocaleString()}
+            ₹{totalBilledAll.toLocaleString('en-IN')}
           </span>
         </div>
       </div>
@@ -337,7 +337,7 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({
                   <div className="pt-2 flex items-center justify-between text-xs">
                     <span className="text-slate-400 font-mono">Total Billed:</span>
                     <span className="font-mono font-bold text-white tabular-nums">
-                      ${client.totalBilled.toLocaleString()}
+                      ₹{client.totalBilled.toLocaleString('en-IN')}
                     </span>
                   </div>
                 </div>

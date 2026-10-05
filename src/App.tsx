@@ -236,19 +236,31 @@ export default function App() {
       clientEmail: proposal.clientEmail,
       issueDate: new Date().toISOString().split('T')[0],
       dueDate: new Date(Date.now() + 14 * 86400000).toISOString().split('T')[0],
-      items: proposal.milestones.map((m, idx) => ({
-        id: `item-${Date.now()}-${idx}`,
-        serviceTitle: m.title,
-        description: m.deliverable,
-        quantity: 1,
-        rate: m.cost,
-        amount: m.cost
-      })),
+      items: (proposal.pricingItems && proposal.pricingItems.length > 0)
+        ? proposal.pricingItems.map((p, idx) => ({
+            id: `item-${Date.now()}-${idx}`,
+            serviceTitle: p.title,
+            description: p.title,
+            quantity: p.quantity,
+            rate: p.rate,
+            discountPercent: p.discountPercent,
+            taxPercent: p.taxPercent,
+            amount: p.amount
+          }))
+        : proposal.milestones.map((m, idx) => ({
+            id: `item-${Date.now()}-${idx}`,
+            serviceTitle: m.title,
+            description: m.deliverable,
+            quantity: 1,
+            rate: m.cost,
+            amount: m.cost
+          })),
       subtotal: proposal.totalValue,
       taxRate: 0,
       taxAmount: 0,
       discount: 0,
       total: proposal.totalValue,
+      currency: proposal.currency || '₹',
       status: 'pending',
       notes: `Generated from approved proposal ${proposal.proposalNumber}: "${proposal.title}". Payment terms: Net 14.`
     };

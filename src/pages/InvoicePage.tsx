@@ -288,19 +288,19 @@ export const InvoicePage: React.FC<InvoicePageProps> = ({
             <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
               <span className="text-xs text-slate-400 block font-mono">Total Billed Pipeline</span>
               <span className="text-xl font-bold text-white font-mono tabular-nums">
-                ${totalInvoiced.toLocaleString()}
+                ₹{totalInvoiced.toLocaleString('en-IN')}
               </span>
             </div>
             <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
               <span className="text-xs text-slate-400 block font-mono">Cleared & Paid</span>
               <span className="text-xl font-bold text-emerald-400 font-mono tabular-nums">
-                ${totalPaid.toLocaleString()}
+                ₹{totalPaid.toLocaleString('en-IN')}
               </span>
             </div>
             <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
               <span className="text-xs text-slate-400 block font-mono">Outstanding Balance</span>
               <span className="text-xl font-bold text-amber-400 font-mono tabular-nums">
-                ${totalPending.toLocaleString()}
+                ₹{totalPending.toLocaleString('en-IN')}
               </span>
             </div>
           </div>
@@ -388,7 +388,7 @@ export const InvoicePage: React.FC<InvoicePageProps> = ({
                       </div>
                     </td>
                     <td className="py-3.5 px-4 text-right font-mono font-bold text-white tabular-nums text-sm">
-                      ${inv.total.toLocaleString()}
+                      ₹{inv.total.toLocaleString('en-IN')}
                     </td>
                     <td className="py-3.5 px-4 text-center">
                       <span className={`inline-flex items-center px-2.5 py-0.5 rounded text-[11px] font-mono font-medium capitalize ${
@@ -529,7 +529,7 @@ export const InvoicePage: React.FC<InvoicePageProps> = ({
                           >
                             {DIGICOYOTES_SERVICES.map(s => (
                               <option key={s.id} value={s.title}>
-                                {s.title} (${s.startingRate})
+                                {s.title} (₹{s.startingRate.toLocaleString('en-IN')})
                               </option>
                             ))}
                           </select>
@@ -549,7 +549,7 @@ export const InvoicePage: React.FC<InvoicePageProps> = ({
 
                         {/* Rate */}
                         <div className="sm:col-span-2 space-y-1">
-                          <label className="text-[11px] text-slate-400">Rate ($)</label>
+                          <label className="text-[11px] text-slate-400">Rate (₹)</label>
                           <input
                             type="number"
                             min="0"
@@ -562,7 +562,7 @@ export const InvoicePage: React.FC<InvoicePageProps> = ({
                         {/* Total & Remove */}
                         <div className="sm:col-span-2 flex items-end justify-between pb-1">
                           <span className="font-mono font-bold text-orange-400 text-sm">
-                            ${(item.amount || 0).toLocaleString()}
+                            ₹{(item.amount || 0).toLocaleString('en-IN')}
                           </span>
                           {formItems.length > 1 && (
                             <button
@@ -605,7 +605,7 @@ export const InvoicePage: React.FC<InvoicePageProps> = ({
                       />
                     </div>
                     <div className="space-y-1">
-                      <label className="text-slate-400">Discount ($)</label>
+                      <label className="text-slate-400">Discount (₹)</label>
                       <input
                         type="number"
                         min="0"
@@ -630,23 +630,23 @@ export const InvoicePage: React.FC<InvoicePageProps> = ({
                 <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800 space-y-2 text-xs font-mono">
                   <div className="flex items-center justify-between text-slate-400">
                     <span>Subtotal:</span>
-                    <span>${subtotal.toLocaleString()}</span>
+                    <span>₹{subtotal.toLocaleString('en-IN')}</span>
                   </div>
                   {formTaxRate > 0 && (
                     <div className="flex items-center justify-between text-slate-400">
                       <span>Tax ({formTaxRate}%):</span>
-                      <span>+${taxAmount.toLocaleString()}</span>
+                      <span>+₹{taxAmount.toLocaleString('en-IN')}</span>
                     </div>
                   )}
                   {formDiscount > 0 && (
                     <div className="flex items-center justify-between text-emerald-400">
                       <span>Discount:</span>
-                      <span>-${formDiscount.toLocaleString()}</span>
+                      <span>-₹{formDiscount.toLocaleString('en-IN')}</span>
                     </div>
                   )}
                   <div className="pt-2 border-t border-slate-800 flex items-center justify-between text-sm font-bold text-white">
                     <span>Total Due:</span>
-                    <span className="text-orange-400 text-base">${total.toLocaleString()}</span>
+                    <span className="text-orange-400 text-base">₹{total.toLocaleString('en-IN')}</span>
                   </div>
                 </div>
               </div>
@@ -790,9 +790,9 @@ export const InvoicePage: React.FC<InvoicePageProps> = ({
                         <div className="text-[11px] text-slate-400">{item.description}</div>
                       </td>
                       <td className="py-3 text-center font-mono">{item.quantity}</td>
-                      <td className="py-3 text-right font-mono">${item.rate.toLocaleString()}</td>
+                      <td className="py-3 text-right font-mono">₹{item.rate.toLocaleString('en-IN')}</td>
                       <td className="py-3 text-right font-mono font-bold text-orange-400">
-                        ${item.amount.toLocaleString()}
+                        ₹{item.amount.toLocaleString('en-IN')}
                       </td>
                     </tr>
                   ))}
@@ -804,23 +804,23 @@ export const InvoicePage: React.FC<InvoicePageProps> = ({
                 <div className="w-64 space-y-2 text-xs font-mono">
                   <div className="flex justify-between text-slate-400">
                     <span>Subtotal:</span>
-                    <span>${viewingInvoice.subtotal.toLocaleString()}</span>
+                    <span>₹{viewingInvoice.subtotal.toLocaleString('en-IN')}</span>
                   </div>
                   {viewingInvoice.taxRate > 0 && (
                     <div className="flex justify-between text-slate-400">
                       <span>Tax ({viewingInvoice.taxRate}%):</span>
-                      <span>+${viewingInvoice.taxAmount.toLocaleString()}</span>
+                      <span>+₹{viewingInvoice.taxAmount.toLocaleString('en-IN')}</span>
                     </div>
                   )}
                   {viewingInvoice.discount > 0 && (
                     <div className="flex justify-between text-emerald-400">
                       <span>Discount:</span>
-                      <span>-${viewingInvoice.discount.toLocaleString()}</span>
+                      <span>-₹{viewingInvoice.discount.toLocaleString('en-IN')}</span>
                     </div>
                   )}
                   <div className="pt-2 border-t border-slate-800 flex justify-between text-base font-bold text-white">
                     <span>Total Balance:</span>
-                    <span className="text-orange-400">${viewingInvoice.total.toLocaleString()}</span>
+                    <span className="text-orange-400">₹{viewingInvoice.total.toLocaleString('en-IN')}</span>
                   </div>
                 </div>
               </div>

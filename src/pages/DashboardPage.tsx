@@ -3,7 +3,7 @@ import { Client, Invoice, Proposal, HistoryItem, SmtpConfig, SupabaseConfig } fr
 import { Card3D } from '../components/Card3D';
 import { Coyote3D } from '../components/Coyote3D';
 import { 
-  DollarSign, 
+  IndianRupee, 
   Clock, 
   FileCheck, 
   Users, 
@@ -99,11 +99,11 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
             <div className="flex items-center justify-between">
               <span className="text-xs font-medium text-slate-400">Total Cleared Revenue</span>
               <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
-                <DollarSign className="w-4 h-4" />
+                <IndianRupee className="w-4 h-4" />
               </div>
             </div>
             <div className="text-2xl font-bold text-white font-mono tabular-nums">
-              ${totalPaidRevenue.toLocaleString()}
+              ₹{totalPaidRevenue.toLocaleString('en-IN')}
             </div>
             <div className="text-[11px] text-emerald-400 font-mono flex items-center gap-1">
               <span>+18.4% from last quarter</span>
@@ -120,7 +120,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
               </div>
             </div>
             <div className="text-2xl font-bold text-amber-400 font-mono tabular-nums">
-              ${pendingAmount.toLocaleString()}
+              ₹{pendingAmount.toLocaleString('en-IN')}
             </div>
             <div className="text-[11px] text-slate-400 font-mono">
               Across {invoices.filter(i => i.status === 'pending' || i.status === 'overdue').length} client accounts
@@ -137,7 +137,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
               </div>
             </div>
             <div className="text-2xl font-bold text-white font-mono tabular-nums">
-              ${proposalPipeline.toLocaleString()}
+              ₹{proposalPipeline.toLocaleString('en-IN')}
             </div>
             <div className="text-[11px] text-slate-400 font-mono">
               {proposals.filter(p => p.status === 'sent').length} awaiting client signature
@@ -223,7 +223,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
                           </div>
                         </td>
                         <td className="py-3.5 px-4 text-right font-mono font-bold text-white tabular-nums">
-                          ${invoice.total.toLocaleString()}
+                          ₹{invoice.total.toLocaleString('en-IN')}
                         </td>
                         <td className="py-3.5 px-4 text-center">
                           <span className={`inline-flex items-center px-2 py-0.5 rounded text-[11px] font-mono font-medium capitalize ${
@@ -285,7 +285,7 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({
                   <h3 className="text-xs font-semibold text-white truncate">{proposal.title}</h3>
                   <div className="flex items-center justify-between text-xs pt-1 border-t border-slate-800/80">
                     <span className="text-slate-400">{proposal.clientName}</span>
-                    <span className="font-mono font-bold text-white">${proposal.totalValue.toLocaleString()}</span>
+                    <span className="font-mono font-bold text-white">₹{proposal.totalValue.toLocaleString('en-IN')}</span>
                   </div>
                 </div>
               ))}

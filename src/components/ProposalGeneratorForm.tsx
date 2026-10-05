@@ -271,8 +271,8 @@ export const ProposalGeneratorForm: React.FC<ProposalGeneratorFormProps> = ({
 
   const handleOpenDirectGmail = () => {
     const compiled = compileProposalObject();
-    const plainText = `DIGITAL COYOTES — AGENCY PROPOSAL\nProposal Number: ${compiled.proposalNumber}\nClient: ${compiled.clientName} (${compiled.clientEmail})\nTotal: $${compiled.totalValue.toLocaleString()}\n\nOverview:\n${compiled.summary}\n\nDeliverables:\n${compiled.pricingItems?.map(p => `- ${p.title}: $${p.amount.toLocaleString()}`).join('\n')}\n\nTerms:\n${compiled.terms}`;
-    const subject = `[Digital Coyotes] Agency Proposal: ${compiled.title} ($${compiled.totalValue.toLocaleString()})`;
+    const plainText = `DIGITAL COYOTES — AGENCY PROPOSAL\nProposal Number: ${compiled.proposalNumber}\nClient: ${compiled.clientName} (${compiled.clientEmail})\nTotal: ${currency}${compiled.totalValue.toLocaleString('en-IN')}\n\nOverview:\n${compiled.summary}\n\nDeliverables:\n${compiled.pricingItems?.map(p => `- ${p.title}: ${currency}${p.amount.toLocaleString('en-IN')}`).join('\n')}\n\nTerms:\n${compiled.terms}`;
+    const subject = `[Digital Coyotes] Agency Proposal: ${compiled.title} (${currency}${compiled.totalValue.toLocaleString('en-IN')})`;
     openInGmailCompose('thedigitalcoyotes@gmail.com', subject, plainText, compiled.clientEmail);
   };
 
@@ -291,14 +291,14 @@ export const ProposalGeneratorForm: React.FC<ProposalGeneratorFormProps> = ({
 
         {/* Action Buttons: Save, Versions, Email, Download PDF */}
         <div className="flex flex-wrap items-center gap-2">
-          {/* Currency Toggle */}
-          <button
-            onClick={() => setCurrency(c => c === '₹' ? '$' : '₹')}
-            className="px-2.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono font-bold text-orange-400 hover:bg-slate-800 transition-colors cursor-pointer"
-            title="Toggle currency symbol"
+          {/* Currency Display */}
+          <div
+            className="px-2.5 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono font-bold text-orange-400 flex items-center gap-1.5 shadow-sm"
+            title="Billing Currency: Indian Rupees (INR)"
           >
-            {currency} Currency
-          </button>
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+            <span>₹ INR (Rupees)</span>
+          </div>
 
           <button
             onClick={handleSave}
@@ -565,7 +565,7 @@ export const ProposalGeneratorForm: React.FC<ProposalGeneratorFormProps> = ({
                     </div>
 
                     <div className="space-y-0.5">
-                      <span className="text-[10px] font-mono text-slate-400 block uppercase">RATE</span>
+                      <span className="text-[10px] font-mono text-slate-400 block uppercase">RATE ({currency})</span>
                       <input
                         type="number"
                         min="0"
@@ -753,10 +753,10 @@ export const ProposalGeneratorForm: React.FC<ProposalGeneratorFormProps> = ({
                           {item.quantity}
                         </td>
                         <td className="py-2.5 px-3 text-right font-mono text-slate-700">
-                          {currency}{item.rate.toLocaleString()}
+                          {currency}{item.rate.toLocaleString('en-IN')}
                         </td>
                         <td className="py-2.5 px-3 text-right font-mono font-bold text-slate-900">
-                          {currency}{item.amount.toLocaleString()}
+                          {currency}{item.amount.toLocaleString('en-IN')}
                         </td>
                       </tr>
                     ))}
@@ -768,7 +768,7 @@ export const ProposalGeneratorForm: React.FC<ProposalGeneratorFormProps> = ({
                   <div className="inline-flex items-center gap-3 py-2 px-4 rounded-xl bg-gradient-to-r from-blue-600 to-emerald-500 text-white font-bold shadow-md">
                     <span className="text-xs uppercase font-mono tracking-wider">TOTAL</span>
                     <span className="text-base font-mono tracking-tight font-extrabold">
-                      {currency}{totalValue.toLocaleString()}
+                      {currency}{totalValue.toLocaleString('en-IN')}
                     </span>
                   </div>
                 </div>
