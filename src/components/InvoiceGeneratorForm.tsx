@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Invoice, Client, InvoiceItem, SmtpConfig } from '../types';
+import { Invoice, Client, InvoiceItem, SmtpConfig, ServiceItem } from '../types';
 import { DIGICOYOTES_SERVICES } from '../data/services';
 import { DigiCoyoteLogo } from './Logo';
 import { openInGmailCompose } from '../lib/phpMailer';
@@ -15,7 +15,8 @@ import {
   Send, 
   CheckCircle2, 
   Check, 
-  DollarSign 
+  DollarSign,
+  Sparkles
 } from 'lucide-react';
 
 interface InvoiceGeneratorFormProps {
@@ -25,6 +26,7 @@ interface InvoiceGeneratorFormProps {
   onSave: (invoice: Invoice) => void;
   onSendViaMailer: (invoice: Invoice) => Promise<any>;
   onClose?: () => void;
+  preselectedService?: ServiceItem | null;
 }
 
 export const InvoiceGeneratorForm: React.FC<InvoiceGeneratorFormProps> = ({
@@ -33,7 +35,8 @@ export const InvoiceGeneratorForm: React.FC<InvoiceGeneratorFormProps> = ({
   smtpConfig,
   onSave,
   onSendViaMailer,
-  onClose
+  onClose,
+  preselectedService
 }) => {
   // Form State matching Image 1
   const [currency, setCurrency] = useState<'₹' | '$'>(initialInvoice?.currency as any || '₹');
@@ -49,6 +52,9 @@ export const InvoiceGeneratorForm: React.FC<InvoiceGeneratorFormProps> = ({
   const [status, setStatus] = useState<'draft' | 'pending' | 'paid' | 'overdue'>(
     initialInvoice?.status || 'draft'
   );
+  const [selectedServiceId, setSelectedServiceId] = useState<string>(
+    preselectedService?.id || ''
+  );
 
   // Client Details
   const defaultClient = clients[0];
@@ -63,41 +69,56 @@ export const InvoiceGeneratorForm: React.FC<InvoiceGeneratorFormProps> = ({
       'MG Road, Bengaluru, KA 560001\nGSTIN 29XXXX1234F1Z5'
   );
 
+  // Initial items generation helper
+  const getInitialItems = (): InvoiceItem[] => {
+    if (initialInvoice?.items && initialInvoice.items.length > 0) {
+      return initialInvoice.items;
+    }
+    if (preselectedService?.defaultInvoice?.items && preselectedService.defaultInvoice.items.length > 0) {
+      return preselectedService.defaultInvoice.items;
+    }
+    // Default to first service preset or standard
+    const defaultSvc = DIGICOYOTES_SERVICES[0];
+    if (defaultSvc?.defaultInvoice?.items) {
+      return defaultSvc.defaultInvoice.items;
+    }
+    return [
+      {
+        id: 'item-1',
+        serviceTitle: 'Business Website Architecture & Layouts',
+        description: 'Custom responsive design, up to 7 key pages, interactive lead capture',
+        quantity: 1,
+        rate: 55000,
+        discountPercent: 0,
+        taxPercent: 18,
+        amount: 64900
+      },
+      {
+        id: 'item-2',
+        serviceTitle: 'CMS Setup & On-page Schema Integration',
+        description: 'Content management configuration, contact routing & SEO tags',
+        quantity: 1,
+        rate: 20000,
+        discountPercent: 0,
+        taxPercent: 18,
+        amount: 23600
+      }
+    ];
+  };
+
   // Line Items
-  const [items, setItems] = useState<InvoiceItem[]>(
-    initialInvoice?.items && initialInvoice.items.length > 0
-      ? initialInvoice.items
-      : [
-          {
-            id: 'item-1',
-            serviceTitle: 'Q3 brand refresh',
-            description: 'Brand strategy, design tokens and digital guidelines.',
-            quantity: 1,
-            rate: 240000,
-            discountPercent: 0,
-            taxPercent: 18,
-            amount: 283200
-          },
-          {
-            id: 'item-2',
-            serviceTitle: 'Design system audit',
-            description: 'Component architecture and accessibility evaluation.',
-            quantity: 1,
-            rate: 84000,
-            discountPercent: 5,
-            taxPercent: 18,
-            amount: 94164
-          }
-        ]
-  );
+  const [items, setItems] = useState<InvoiceItem[]>(getInitialItems());
 
   // Notes & Terms
   const [notes, setNotes] = useState<string>(
-    initialInvoice?.notes || 'Thank you for your business. We appreciate the partnership.'
+    initialInvoice?.notes ||
+    preselectedService?.defaultInvoice?.notes ||
+    'Deliverables certified by Digital Coyotes. Payment in INR via NEFT/RTGS or UPI.'
   );
   const [terms, setTerms] = useState<string>(
     initialInvoice?.terms ||
-      '1. Payment due within 15 days of invoice date.\n2. Late payments incur 1.5% monthly interest.\n3. All disputes subject to Bengaluru jurisdiction.'
+    preselectedService?.defaultInvoice?.terms ||
+    '1. 50% advance before milestone initiation, balance on deployment.\n2. Invoiced with standard 18% GST.\n3. Bengaluru / Indian jurisdiction applies.'
   );
 
   // State feedback
@@ -210,6 +231,21 @@ export const InvoiceGeneratorForm: React.FC<InvoiceGeneratorFormProps> = ({
     }
   };
 
+  const handleApplyServicePreset = (serviceId: string) => {
+    setSelectedServiceId(serviceId);
+    const found = DIGICOYOTES_SERVICES.find(s => s.id === serviceId);
+    if (found && found.defaultInvoice) {
+      setItems(found.defaultInvoice.items);
+      if (found.defaultInvoice.notes) setNotes(found.defaultInvoice.notes);
+      if (found.defaultInvoice.terms) setTerms(found.defaultInvoice.terms);
+      setCurrency('₹');
+      setNotification(`Applied custom invoice template for "${found.title}" (${found.category})`);
+      setTimeout(() => setNotification(null), 4000);
+    }
+  };
+
+  const serviceCategories = Array.from(new Set(DIGICOYOTES_SERVICES.map(s => s.category)));
+
   return (
     <div className="space-y-6 pb-20">
       {/* Top Header matching Reference Image 1 */}
@@ -301,6 +337,40 @@ export const InvoiceGeneratorForm: React.FC<InvoiceGeneratorFormProps> = ({
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* LEFT COLUMN: FORM INPUTS */}
         <div className="lg:col-span-6 space-y-6">
+          {/* Card 0: Service Discipline & Invoice Preset Selector */}
+          <div className="rounded-2xl bg-gradient-to-r from-orange-950/30 to-slate-900/80 border border-orange-500/30 p-4 space-y-2 shadow-sm">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-1.5 text-xs font-bold text-orange-400 font-display">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Service Discipline & Invoice Template</span>
+              </div>
+              <span className="text-[10px] font-mono text-slate-400 uppercase">
+                {DIGICOYOTES_SERVICES.length} Custom Offerings
+              </span>
+            </div>
+            <p className="text-[11px] text-slate-400">
+              Select any service to instantly populate its bespoke line items, ₹ INR rates, deliverables, and billing terms:
+            </p>
+            <div className="pt-1">
+              <select
+                value={selectedServiceId}
+                onChange={(e) => handleApplyServicePreset(e.target.value)}
+                className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-orange-500/40 text-slate-100 text-xs font-medium focus:outline-none focus:border-orange-500 cursor-pointer"
+              >
+                <option value="">-- Choose a Service Preset ({DIGICOYOTES_SERVICES.length} Offerings) --</option>
+                {serviceCategories.map((cat) => (
+                  <optgroup key={cat} label={`── ${cat.toUpperCase()} ──`}>
+                    {DIGICOYOTES_SERVICES.filter(s => s.category === cat).map((svc) => (
+                      <option key={svc.id} value={svc.id}>
+                        {svc.title} — from ₹{svc.startingRate.toLocaleString('en-IN')}
+                      </option>
+                    ))}
+                  </optgroup>
+                ))}
+              </select>
+            </div>
+          </div>
+
           {/* Card 1: Invoice Details */}
           <div className="rounded-2xl bg-slate-900/60 border border-slate-800 p-5 space-y-4 shadow-sm">
             <h3 className="text-sm font-bold text-white font-display">Invoice Details</h3>

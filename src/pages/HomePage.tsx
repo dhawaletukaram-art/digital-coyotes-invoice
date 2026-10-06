@@ -34,10 +34,13 @@ export const HomePage: React.FC<HomePageProps> = ({
 
   const categories: Array<'All' | ServiceCategory> = [
     'All',
-    'Development & AI',
-    'Design & Creative',
-    'Marketing & Media',
-    'Brand & Strategy'
+    'Website Development',
+    'Social Media Marketing',
+    'Performance Marketing',
+    'SEO, EO, GEO & Online Visibility',
+    'AI & Automation Solutions',
+    'Software & Application Development',
+    'Core Digital Coyotes Offerings'
   ];
 
   const filteredServices = DIGICOYOTES_SERVICES.filter(service => {
@@ -184,7 +187,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               Full Spectrum Capabilities
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-white font-display">
-              DigiCoyotes Services Catalog (25 Core Disciplines)
+              DigiCoyotes Services Catalog ({DIGICOYOTES_SERVICES.length} Core Disciplines)
             </h2>
             <p className="text-sm text-slate-400 mt-1 max-w-2xl">
               Directly select any service below to automatically build an invoice or proposal line item.

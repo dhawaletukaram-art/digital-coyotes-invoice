@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Proposal, Client, ProposalSection, ProposalPricingItem, SmtpConfig } from '../types';
+import { Proposal, Client, ProposalSection, ProposalPricingItem, SmtpConfig, ServiceItem } from '../types';
 import { DIGICOYOTES_SERVICES } from '../data/services';
 import { DigiCoyoteLogo } from './Logo';
 import { openInGmailCompose } from '../lib/phpMailer';
@@ -17,7 +17,8 @@ import {
   Check, 
   GripVertical,
   Receipt,
-  X
+  X,
+  Sparkles
 } from 'lucide-react';
 
 interface ProposalGeneratorFormProps {
@@ -28,6 +29,7 @@ interface ProposalGeneratorFormProps {
   onSendViaMailer: (proposal: Proposal) => Promise<any>;
   onConvertToInvoice?: (proposal: Proposal) => void;
   onClose?: () => void;
+  preselectedService?: ServiceItem | null;
 }
 
 export const ProposalGeneratorForm: React.FC<ProposalGeneratorFormProps> = ({
@@ -37,14 +39,20 @@ export const ProposalGeneratorForm: React.FC<ProposalGeneratorFormProps> = ({
   onSave,
   onSendViaMailer,
   onConvertToInvoice,
-  onClose
+  onClose,
+  preselectedService
 }) => {
   const [currency, setCurrency] = useState<'₹' | '$'>(initialProposal?.currency as any || '₹');
   const [proposalNumber, setProposalNumber] = useState<string>(
     initialProposal?.proposalNumber || `PRP-2026-${Math.floor(100 + Math.random() * 900)}`
   );
+  const [selectedServiceId, setSelectedServiceId] = useState<string>(
+    preselectedService?.id || ''
+  );
   const [title, setTitle] = useState<string>(
-    initialProposal?.title || 'Brand & Product Design Engagement'
+    initialProposal?.title ||
+    preselectedService?.defaultProposal?.title ||
+    'Business Website Engineering Proposal'
   );
   const [issuedDate, setIssuedDate] = useState<string>(
     initialProposal?.validUntil ? new Date().toISOString().split('T')[0] : '2026-10-05'
@@ -68,75 +76,106 @@ export const ProposalGeneratorForm: React.FC<ProposalGeneratorFormProps> = ({
     initialProposal?.clientAddress || 'MG Road, Bengaluru, KA 560001'
   );
 
-  // Sections matching Image 2
-  const [sections, setSections] = useState<ProposalSection[]>(
-    initialProposal?.sections && initialProposal.sections.length > 0
-      ? initialProposal.sections
-      : [
-          {
-            id: 'sec-1',
-            title: 'Overview',
-            content:
-              'Digital Coyotes will partner with Arcline to redefine the brand foundation and translate it into a working product design system across web and mobile surfaces.'
-          },
-          {
-            id: 'sec-2',
-            title: 'Scope of Work',
-            content:
-              '1. Discovery workshops (2 weeks)\n2. Brand identity & guidelines\n3. Design system v1 (40+ components)\n4. Web + iOS product screens'
-          },
-          {
-            id: 'sec-3',
-            title: 'Timeline',
-            content:
-              '10 weeks end-to-end. Weekly reviews on Fridays. Final handover with production documentation.'
-          }
-        ]
-  );
+  // Sections initialization helper
+  const getInitialSections = (): ProposalSection[] => {
+    if (initialProposal?.sections && initialProposal.sections.length > 0) {
+      return initialProposal.sections;
+    }
+    if (preselectedService?.defaultProposal?.sections && preselectedService.defaultProposal.sections.length > 0) {
+      return preselectedService.defaultProposal.sections;
+    }
+    const defaultSvc = DIGICOYOTES_SERVICES[0];
+    if (defaultSvc?.defaultProposal?.sections) {
+      return defaultSvc.defaultProposal.sections;
+    }
+    return [
+      {
+        id: 'sec-1',
+        title: 'Executive Summary',
+        content: 'Digital Coyotes will design, develop, and deploy an ultra-responsive business flagship website positioned to double conversion and showcase authority in the Indian and global marketplace.'
+      },
+      {
+        id: 'sec-2',
+        title: 'Scope of Work & Deliverables',
+        content: '1. Information architecture and UX wireframing\n2. Bespoke visual identity integration & typography\n3. Mobile-first responsive frontend with modern interactions\n4. Direct WhatsApp & inquiry form integration\n5. Google Analytics 4 & Meta Pixel event setup'
+      },
+      {
+        id: 'sec-3',
+        title: 'Execution & Quality Assurance',
+        content: 'Digital Coyotes guarantees enterprise-grade performance, dedicated weekly sprint synchronization, and transparent Indian Rupee invoicing.'
+      }
+    ];
+  };
 
-  // Itemized Pricing matching Image 2
-  const [pricingItems, setPricingItems] = useState<ProposalPricingItem[]>(
-    initialProposal?.pricingItems && initialProposal.pricingItems.length > 0
-      ? initialProposal.pricingItems
-      : [
-          {
-            id: 'price-1',
-            title: 'Discovery & strategy',
-            quantity: 1,
-            rate: 120000,
-            discountPercent: 0,
-            taxPercent: 18,
-            amount: 141600
-          },
-          {
-            id: 'price-2',
-            title: 'Brand identity & guidelines',
-            quantity: 1,
-            rate: 180000,
-            discountPercent: 0,
-            taxPercent: 18,
-            amount: 212400
-          },
-          {
-            id: 'price-3',
-            title: 'Design system v1',
-            quantity: 1,
-            rate: 240000,
-            discountPercent: 5,
-            taxPercent: 18,
-            amount: 269040
-          }
-        ]
-  );
+  const [sections, setSections] = useState<ProposalSection[]>(getInitialSections());
+
+  // Itemized Pricing initialization helper
+  const getInitialPricingItems = (): ProposalPricingItem[] => {
+    if (initialProposal?.pricingItems && initialProposal.pricingItems.length > 0) {
+      return initialProposal.pricingItems;
+    }
+    if (preselectedService?.defaultProposal?.pricingItems && preselectedService.defaultProposal.pricingItems.length > 0) {
+      return preselectedService.defaultProposal.pricingItems;
+    }
+    const defaultSvc = DIGICOYOTES_SERVICES[0];
+    if (defaultSvc?.defaultProposal?.pricingItems) {
+      return defaultSvc.defaultProposal.pricingItems;
+    }
+    return [
+      {
+        id: 'price-1',
+        title: 'Core Business Website Design & Frontend Engineering',
+        quantity: 1,
+        rate: 55000,
+        discountPercent: 0,
+        taxPercent: 18,
+        amount: 64900
+      },
+      {
+        id: 'price-2',
+        title: 'CMS Integration, Lead Capture & Analytics Setup',
+        quantity: 1,
+        rate: 20000,
+        discountPercent: 0,
+        taxPercent: 18,
+        amount: 23600
+      }
+    ];
+  };
+
+  const [pricingItems, setPricingItems] = useState<ProposalPricingItem[]>(getInitialPricingItems());
 
   // Terms and Notes
   const [terms, setTerms] = useState<string>(
     initialProposal?.terms ||
-      '1. Payment due within 15 days of invoice date.\n2. Late payments incur 1.5% monthly interest.\n3. All disputes subject to Bengaluru jurisdiction.'
+    preselectedService?.defaultProposal?.terms ||
+    '1. Valid for 30 calendar days from issue.\n2. Milestone delivery cadence with dedicated PM.\n3. All figures stated in Indian Rupees (INR / ₹) with 18% statutory GST.'
   );
   const [notes, setNotes] = useState<string>(
-    initialProposal?.notes || 'Thank you for your business. We appreciate the partnership.'
+    initialProposal?.notes ||
+    preselectedService?.defaultProposal?.notes ||
+    'Thank you for considering Digital Coyotes. We look forward to creating extraordinary value together.'
   );
+
+  // Apply service preset handler
+  const handleApplyServicePreset = (serviceId: string) => {
+    setSelectedServiceId(serviceId);
+    const found = DIGICOYOTES_SERVICES.find(s => s.id === serviceId);
+    if (found && found.defaultProposal) {
+      setTitle(found.defaultProposal.title);
+      setSections(found.defaultProposal.sections);
+      if (found.defaultProposal.pricingItems) {
+        setPricingItems(found.defaultProposal.pricingItems);
+      }
+      if (found.defaultProposal.terms) setTerms(found.defaultProposal.terms);
+      if (found.defaultProposal.notes) setNotes(found.defaultProposal.notes);
+      setCurrency('₹');
+      setNotification(`Applied custom proposal template for "${found.title}" (${found.category})`);
+      setTimeout(() => setNotification(null), 4000);
+    }
+  };
+
+  const serviceCategories = Array.from(new Set(DIGICOYOTES_SERVICES.map(s => s.category)));
 
   // State Feedback
   const [isSending, setIsSending] = useState<boolean>(false);
@@ -394,6 +433,40 @@ export const ProposalGeneratorForm: React.FC<ProposalGeneratorFormProps> = ({
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* LEFT COLUMN: FORM INPUTS */}
         <div className="lg:col-span-6 space-y-6">
+          {/* Card 0: Service Discipline & Proposal Preset Selector */}
+          <div className="rounded-2xl bg-gradient-to-r from-orange-950/30 to-slate-900/80 border border-orange-500/30 p-4 space-y-2 shadow-sm">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-1.5 text-xs font-bold text-orange-400 font-display">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Service Discipline & Proposal Template</span>
+              </div>
+              <span className="text-[10px] font-mono text-slate-400 uppercase">
+                {DIGICOYOTES_SERVICES.length} Custom Offerings
+              </span>
+            </div>
+            <p className="text-[11px] text-slate-400">
+              Select any service to instantly populate its bespoke executive summary, scope of work, ₹ INR milestones & itemized pricing:
+            </p>
+            <div className="pt-1">
+              <select
+                value={selectedServiceId}
+                onChange={(e) => handleApplyServicePreset(e.target.value)}
+                className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-orange-500/40 text-slate-100 text-xs font-medium focus:outline-none focus:border-orange-500 cursor-pointer"
+              >
+                <option value="">-- Choose a Service Preset ({DIGICOYOTES_SERVICES.length} Offerings) --</option>
+                {serviceCategories.map((cat) => (
+                  <optgroup key={cat} label={`── ${cat.toUpperCase()} ──`}>
+                    {DIGICOYOTES_SERVICES.filter(s => s.category === cat).map((svc) => (
+                      <option key={svc.id} value={svc.id}>
+                        {svc.title} — from ₹{svc.startingRate.toLocaleString('en-IN')}
+                      </option>
+                    ))}
+                  </optgroup>
+                ))}
+              </select>
+            </div>
+          </div>
+
           {/* Card 1: Proposal Details */}
           <div className="rounded-2xl bg-slate-900/60 border border-slate-800 p-5 space-y-4 shadow-sm">
             <h3 className="text-sm font-bold text-white font-display">Proposal Details</h3>

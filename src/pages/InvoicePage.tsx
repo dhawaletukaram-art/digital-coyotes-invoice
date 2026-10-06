@@ -74,11 +74,11 @@ export const InvoicePage: React.FC<InvoicePageProps> = ({
         }
       : {
           id: `item-${Date.now()}`,
-          serviceTitle: 'Web Design & Development',
-          description: 'Custom React & PHP full-stack production build with responsive UX.',
+          serviceTitle: 'Business Websites',
+          description: 'Custom responsive design, up to 7 key pages, interactive lead capture.',
           quantity: 1,
-          rate: 4800,
-          amount: 4800
+          rate: 75000,
+          amount: 75000
         }
   ]);
 
@@ -272,6 +272,7 @@ export const InvoicePage: React.FC<InvoicePageProps> = ({
         <InvoiceGeneratorForm
           clients={clients}
           smtpConfig={smtpConfig}
+          preselectedService={preselectedService}
           onSave={(inv) => {
             onSaveInvoice(inv);
             setActiveViewMode('ledger');

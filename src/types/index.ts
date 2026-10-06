@@ -1,8 +1,33 @@
 export type ServiceCategory = 
+  | 'Website Development'
+  | 'Social Media Marketing'
+  | 'Performance Marketing'
+  | 'SEO, EO, GEO & Online Visibility'
+  | 'AI & Automation Solutions'
+  | 'Software & Application Development'
+  | 'Core Digital Coyotes Offerings'
   | 'Brand & Strategy'
   | 'Design & Creative'
   | 'Development & AI'
   | 'Marketing & Media';
+
+export interface ServiceInvoicePreset {
+  items: InvoiceItem[];
+  notes?: string;
+  terms?: string;
+  taxRate?: number;
+}
+
+export interface ServiceProposalPreset {
+  title: string;
+  summary: string;
+  scopeOfWork: string[];
+  sections: ProposalSection[];
+  milestones: ProposalMilestone[];
+  pricingItems?: ProposalPricingItem[];
+  terms?: string;
+  notes?: string;
+}
 
 export interface ServiceItem {
   id: string;
@@ -14,6 +39,8 @@ export interface ServiceItem {
   startingRate: number; // in INR (₹ Indian Rupees)
   duration: string;
   isPopular?: boolean;
+  defaultInvoice?: ServiceInvoicePreset;
+  defaultProposal?: ServiceProposalPreset;
 }
 
 export interface Client {

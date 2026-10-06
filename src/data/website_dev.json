@@ -1,0 +1,721 @@
+[
+  {
+    "id": "business-websites",
+    "title": "Business Websites",
+    "category": "Website Development",
+    "shortDescription": "Modern, high-trust business websites designed to turn visitors into booked clients.",
+    "fullDescription": "Custom responsive multi-page website architecture with lightning-fast load times, local SEO schema, and lead capture funnels.",
+    "typicalDeliverables": [
+      "Custom Responsive UI",
+      "Lead Capture System",
+      "On-Page SEO Schema",
+      "Contact & Booking Integration"
+    ],
+    "startingRate": 45000,
+    "duration": "2-3 weeks",
+    "isPopular": true,
+    "defaultInvoice": {
+      "items": [
+        {
+          "id": "inv-bw-1",
+          "serviceTitle": "Business Website Design & UI Architecture",
+          "description": "Responsive multi-page design (Home, About, Services, Contact) with sub-second performance.",
+          "quantity": 1,
+          "rate": 25000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 29500
+        },
+        {
+          "id": "inv-bw-2",
+          "serviceTitle": "Lead Capture Funnel & CMS Setup",
+          "description": "Form integration, CRM webhooks, local SEO schema, and SSL hosting deployment.",
+          "quantity": 1,
+          "rate": 20000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 23600
+        }
+      ],
+      "notes": "Thank you for partnering with Digital Coyotes. Deployment live on production server.",
+      "terms": "1. 50% milestone settlement upon code freeze. 2. 30 days post-launch warranty included.",
+      "taxRate": 18
+    },
+    "defaultProposal": {
+      "title": "High-Converting Business Website & Digital Presence",
+      "summary": "Engineering a high-trust digital storefront that converts visitors into qualified inbound sales inquiries with sub-second mobile page speeds.",
+      "scopeOfWork": [
+        "UX wireframing and responsive visual design",
+        "Full-stack frontend development with dynamic CMS",
+        "Lead capture forms, WhatsApp widget & analytics",
+        "Speed optimization and SEO schema markup"
+      ],
+      "sections": [
+        {
+          "id": "sec-1",
+          "title": "Strategic Objective",
+          "content": "Establish immediate authority in your market and turn cold web visitors into phone calls and scheduled meetings."
+        },
+        {
+          "id": "sec-2",
+          "title": "Technical Deliverables",
+          "content": "1. Responsive UI for all screens\n2. Sub-second PageSpeed score (90+)\n3. WhatsApp and CRM lead capture\n4. Cloud hosting and domain setup"
+        },
+        {
+          "id": "sec-3",
+          "title": "Execution Timeline",
+          "content": "3 weeks total delivery with milestone review at end of each week."
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m-1",
+          "title": "Discovery & UI Wireframes",
+          "duration": "1 Week",
+          "cost": 15000,
+          "deliverable": "Figma prototype & content layout"
+        },
+        {
+          "id": "m-2",
+          "title": "Frontend Engineering & CMS",
+          "duration": "1 Week",
+          "cost": 20000,
+          "deliverable": "Staging build with interactive features"
+        },
+        {
+          "id": "m-3",
+          "title": "Testing, SEO & Launch",
+          "duration": "1 Week",
+          "cost": 10000,
+          "deliverable": "Production go-live & DNS cutover"
+        }
+      ],
+      "pricingItems": [
+        {
+          "id": "p-1",
+          "title": "UI/UX & Responsive Layouts",
+          "quantity": 1,
+          "rate": 15000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 17700
+        },
+        {
+          "id": "p-2",
+          "title": "CMS Engine & Lead Integration",
+          "quantity": 1,
+          "rate": 20000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 23600
+        },
+        {
+          "id": "p-3",
+          "title": "Production Deployment & SEO Setup",
+          "quantity": 1,
+          "rate": 10000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 11800
+        }
+      ],
+      "terms": "Payment split: 40% advance, 40% staging approval, 20% on final launch."
+    }
+  },
+  {
+    "id": "corporate-websites",
+    "title": "Corporate Websites",
+    "category": "Website Development",
+    "shortDescription": "Authoritative corporate portals with enterprise security, governance, and multi-department CMS.",
+    "fullDescription": "Enterprise-grade digital flagships built for scale, compliance, stakeholder relations, and high-volume corporate communication.",
+    "typicalDeliverables": [
+      "Enterprise CMS Architecture",
+      "Investor & PR Portals",
+      "WCAG 2.1 Compliance",
+      "Role-Based Content Workflows"
+    ],
+    "startingRate": 95000,
+    "duration": "4-6 weeks",
+    "defaultInvoice": {
+      "items": [
+        {
+          "id": "inv-cw-1",
+          "serviceTitle": "Corporate Information Architecture & Design System",
+          "description": "Brand-aligned design tokens, governance templates, and stakeholder wireframes.",
+          "quantity": 1,
+          "rate": 45000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 53100
+        },
+        {
+          "id": "inv-cw-2",
+          "serviceTitle": "Enterprise Portal Engineering & Compliance",
+          "description": "Headless CMS, role-based workflows, WCAG accessibility, and high-availability cloud deployment.",
+          "quantity": 1,
+          "rate": 50000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 59000
+        }
+      ],
+      "notes": "Corporate enterprise build delivered. SLA agreement active.",
+      "terms": "Net 15 days payment terms. Bank transfer via NEFT/RTGS.",
+      "taxRate": 18
+    },
+    "defaultProposal": {
+      "title": "Corporate Digital Flagship & Enterprise Stakeholder Portal",
+      "summary": "Architecting an institutional digital presence designed for investor credibility, corporate governance, and multi-department team management.",
+      "scopeOfWork": [
+        "Corporate branding and typography system",
+        "Multi-tier content management architecture",
+        "Investor relations, press room & leadership portals",
+        "Enterprise cloud security, CDN & automated backups"
+      ],
+      "sections": [
+        {
+          "id": "sec-1",
+          "title": "Corporate Overview",
+          "content": "Delivering an unshakeable digital headquarters that reflects company stature, attracts institutional partnerships, and satisfies regulatory requirements."
+        },
+        {
+          "id": "sec-2",
+          "title": "Architecture & Security",
+          "content": "Hardened serverless architecture with SSL TLS 1.3, DDoS protection, sub-second global caching, and automated audit logging."
+        },
+        {
+          "id": "sec-3",
+          "title": "Milestone Roadmap",
+          "content": "Structured over 6 weeks with executive stakeholder review sessions at each phase."
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m-1",
+          "title": "Strategy & Corporate IA",
+          "duration": "2 Weeks",
+          "cost": 30000,
+          "deliverable": "Information architecture & executive Figma suite"
+        },
+        {
+          "id": "m-2",
+          "title": "Enterprise Development & CMS",
+          "duration": "3 Weeks",
+          "cost": 45000,
+          "deliverable": "Functional portal on staging environment"
+        },
+        {
+          "id": "m-3",
+          "title": "Security, Compliance & Launch",
+          "duration": "1 Week",
+          "cost": 20000,
+          "deliverable": "Audited production rollout with zero downtime"
+        }
+      ],
+      "pricingItems": [
+        {
+          "id": "p-1",
+          "title": "Corporate IA & Design Architecture",
+          "quantity": 1,
+          "rate": 30000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 35400
+        },
+        {
+          "id": "p-2",
+          "title": "Enterprise Portal & Role Management",
+          "quantity": 1,
+          "rate": 45000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 53100
+        },
+        {
+          "id": "p-3",
+          "title": "Security Audit & Production Deployment",
+          "quantity": 1,
+          "rate": 20000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 23600
+        }
+      ],
+      "terms": "Milestone billing: 30% kickoff, 40% mid-point review, 30% upon final sign-off."
+    }
+  },
+  {
+    "id": "ecommerce-websites",
+    "title": "E-Commerce Websites",
+    "category": "Website Development",
+    "shortDescription": "High-converting online stores with streamlined checkout, inventory sync, and payment automation.",
+    "fullDescription": "Custom full-stack e-commerce platforms engineered to maximize Average Order Value, eliminate cart friction, and automate order fulfillment.",
+    "typicalDeliverables": [
+      "Custom Product Catalog",
+      "Razorpay / Stripe Gateway",
+      "Automated GST Invoicing",
+      "Instant Checkout Funnel"
+    ],
+    "startingRate": 120000,
+    "duration": "4-6 weeks",
+    "isPopular": true,
+    "defaultInvoice": {
+      "items": [
+        {
+          "id": "inv-ec-1",
+          "serviceTitle": "E-Commerce Storefront Architecture & UX",
+          "description": "Custom mobile-first catalog, product detail pages, and dynamic cart drawer.",
+          "quantity": 1,
+          "rate": 60000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 70800
+        },
+        {
+          "id": "inv-ec-2",
+          "serviceTitle": "Payment Gateway & Order Automation Module",
+          "description": "Razorpay/UPI/Credit Card integration, automated GST tax calculation, and order tracking.",
+          "quantity": 1,
+          "rate": 60000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 70800
+        }
+      ],
+      "notes": "E-commerce platform deployed. Gateway credentials and merchant keys verified.",
+      "terms": "Payment due within 15 days. Post-launch support active for 45 days.",
+      "taxRate": 18
+    },
+    "defaultProposal": {
+      "title": "Omnichannel E-Commerce Platform & High-Conversion Storefront",
+      "summary": "Building a high-velocity direct-to-consumer store with sub-second page loads, automated inventory synchronization, and frictionless Indian payment gateways.",
+      "scopeOfWork": [
+        "UX research and conversion-centered product layouts",
+        "Dynamic cart with one-click upsells and cross-sells",
+        "Payment gateway integration (UPI, Netbanking, Cards, EMI)",
+        "Automated email & WhatsApp order confirmation notifications"
+      ],
+      "sections": [
+        {
+          "id": "sec-1",
+          "title": "Storefront Strategy",
+          "content": "Engineered around consumer buying psychology: rapid image zooms, sticky add-to-cart, clear trust badges, and lightning checkout."
+        },
+        {
+          "id": "sec-2",
+          "title": "Merchant Capabilities",
+          "content": "Live inventory controls, automated tax invoicing, discount coupon engine, and shipping partner webhooks."
+        },
+        {
+          "id": "sec-3",
+          "title": "Launch Sprints",
+          "content": "Staged delivery covering design, gateway verification, catalog import, and production go-live."
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m-1",
+          "title": "Store Design & Catalog Architecture",
+          "duration": "2 Weeks",
+          "cost": 35000,
+          "deliverable": "Complete store interactive prototype"
+        },
+        {
+          "id": "m-2",
+          "title": "Core Engineering & Gateway Sync",
+          "duration": "3 Weeks",
+          "cost": 55000,
+          "deliverable": "Working checkout with test transactions"
+        },
+        {
+          "id": "m-3",
+          "title": "Speed Optimization & Launch",
+          "duration": "1 Week",
+          "cost": 30000,
+          "deliverable": "Production go-live with real transactions"
+        }
+      ],
+      "pricingItems": [
+        {
+          "id": "p-1",
+          "title": "Storefront UX & Catalog System",
+          "quantity": 1,
+          "rate": 35000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 41300
+        },
+        {
+          "id": "p-2",
+          "title": "Payment & Order Processing Engine",
+          "quantity": 1,
+          "rate": 55000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 64900
+        },
+        {
+          "id": "p-3",
+          "title": "Performance Tuning & Launch Verification",
+          "quantity": 1,
+          "rate": 30000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 35400
+        }
+      ],
+      "terms": "3-stage payment plan: 35% advance, 35% staging review, 30% production deployment."
+    }
+  },
+  {
+    "id": "shopify-development",
+    "title": "Shopify Development",
+    "category": "Website Development",
+    "shortDescription": "Bespoke Shopify 2.0 themes, Liquid architecture, app integrations, and conversion rate optimization.",
+    "fullDescription": "Custom Shopify engineering turning standard templates into bespoke luxury experiences with customized Liquid sections and zero app bloat.",
+    "typicalDeliverables": [
+      "Custom Liquid 2.0 Theme",
+      "Slide-Out Cart with Upsells",
+      "App Stack Optimization",
+      "Mobile Speed Optimization"
+    ],
+    "startingRate": 85000,
+    "duration": "3-4 weeks",
+    "isPopular": true,
+    "defaultInvoice": {
+      "items": [
+        {
+          "id": "inv-sh-1",
+          "serviceTitle": "Shopify 2.0 Theme Customization & Liquid Sections",
+          "description": "Bespoke Shopify theme architecture, custom PDP layout, and conversion sections.",
+          "quantity": 1,
+          "rate": 50000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 59000
+        },
+        {
+          "id": "inv-sh-2",
+          "serviceTitle": "Shopify App Integration & Speed Optimization",
+          "description": "App stack consolidation, checkout customization, and PageSpeed 90+ mobile optimization.",
+          "quantity": 1,
+          "rate": 35000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 41300
+        }
+      ],
+      "notes": "Shopify store handed over. Staff permissions and admin rights configured.",
+      "terms": "Net 15 days payment terms. UPI and NEFT accepted.",
+      "taxRate": 18
+    },
+    "defaultProposal": {
+      "title": "Custom Shopify 2.0 Flagship Storefront & Growth Infrastructure",
+      "summary": "Building a custom Shopify 2.0 online store engineered with clean Liquid code, rapid load times, and dynamic cart cross-sells to boost ROAS.",
+      "scopeOfWork": [
+        "Bespoke Shopify 2.0 theme built from Figma designs",
+        "Custom product page variants, size charts, and review widgets",
+        "Cart drawer with free shipping progress bar and cross-sells",
+        "Third-party app audit to ensure sub-2-second load times"
+      ],
+      "sections": [
+        {
+          "id": "sec-1",
+          "title": "The Shopify Opportunity",
+          "content": "Harness the power of Shopify ecosystem without looking like a template. Bespoke aesthetic with enterprise reliability."
+        },
+        {
+          "id": "sec-2",
+          "title": "Conversion Engineering",
+          "content": "Every element is tuned for repeat orders: fast collection filtering, predictive search, and 1-click checkout."
+        },
+        {
+          "id": "sec-3",
+          "title": "Turnaround Schedule",
+          "content": "4 weeks from kickoff to official store launch."
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m-1",
+          "title": "Theme Design & Store Architecture",
+          "duration": "1 Week",
+          "cost": 25000,
+          "deliverable": "Figma design system & Shopify architecture"
+        },
+        {
+          "id": "m-2",
+          "title": "Liquid Coding & App Integration",
+          "duration": "2 Weeks",
+          "cost": 40000,
+          "deliverable": "Working Shopify preview theme with apps"
+        },
+        {
+          "id": "m-3",
+          "title": "Catalog Migration & Go-Live",
+          "duration": "1 Week",
+          "cost": 20000,
+          "deliverable": "Live store publishing & domain pointing"
+        }
+      ],
+      "pricingItems": [
+        {
+          "id": "p-1",
+          "title": "Custom Shopify Theme Design",
+          "quantity": 1,
+          "rate": 25000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 29500
+        },
+        {
+          "id": "p-2",
+          "title": "Liquid Architecture & App Stack",
+          "quantity": 1,
+          "rate": 40000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 47200
+        },
+        {
+          "id": "p-3",
+          "title": "Store Migration & Launch Sprint",
+          "quantity": 1,
+          "rate": 20000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 23600
+        }
+      ],
+      "terms": "Standard agency milestones: 40% initial, 40% theme review, 20% on publishing."
+    }
+  },
+  {
+    "id": "landing-pages",
+    "title": "Landing Pages",
+    "category": "Website Development",
+    "shortDescription": "High-velocity direct-response landing pages engineered for maximum ROAS on ad traffic.",
+    "fullDescription": "Conversion-focused single page experiences built with psychological triggers, compelling hooks, social proof, and seamless CRM integrations.",
+    "typicalDeliverables": [
+      "Direct Response Copywriting",
+      "Mobile-First UX",
+      "A/B Testing Variants",
+      "Pixel & Webhook Integration"
+    ],
+    "startingRate": 28000,
+    "duration": "1-2 weeks",
+    "defaultInvoice": {
+      "items": [
+        {
+          "id": "inv-lp-1",
+          "serviceTitle": "High-Conversion Landing Page Design & Copy",
+          "description": "Direct response visual layout, persuasive copywriting, and trust architecture.",
+          "quantity": 1,
+          "rate": 16000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 18880
+        },
+        {
+          "id": "inv-lp-2",
+          "serviceTitle": "Technical Funnel Integration & Analytics",
+          "description": "Form webhook, CRM auto-sync, Meta CAPI & Google Tag Manager setup.",
+          "quantity": 1,
+          "rate": 12000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 14160
+        }
+      ],
+      "notes": "Landing page live. Pixel tracking and lead forms fully operational.",
+      "terms": "Payment due upon deployment. 1 round of free CRO revision included.",
+      "taxRate": 18
+    },
+    "defaultProposal": {
+      "title": "High-Velocity Direct Response Landing Page & Conversion Asset",
+      "summary": "Engineering a dedicated performance landing page designed specifically to convert paid Meta and Google ad traffic into qualified inbound leads.",
+      "scopeOfWork": [
+        "Market positioning and hook-focused copywriting",
+        "Visual design with high-contrast call-to-actions",
+        "Mobile responsive development with sub-second loading",
+        "Integration with CRM, Google Analytics 4, and Meta Pixel"
+      ],
+      "sections": [
+        {
+          "id": "sec-1",
+          "title": "Performance Objective",
+          "content": "Standard websites convert at 2-3%. Our dedicated landing pages target 8-15% conversion rates by eliminating distractions and focusing on a single irresistible call to action."
+        },
+        {
+          "id": "sec-2",
+          "title": "Conversion Elements",
+          "content": "1. 3-Second value proposition hook\n2. Social proof & verified reviews\n3. Interactive lead capture form\n4. Mobile sticky CTA button"
+        },
+        {
+          "id": "sec-3",
+          "title": "Rapid Delivery",
+          "content": "Delivered and live within 10 business days."
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m-1",
+          "title": "Copywriting & Funnel Wireframe",
+          "duration": "3 Days",
+          "cost": 10000,
+          "deliverable": "Approved copy & wireframe layout"
+        },
+        {
+          "id": "m-2",
+          "title": "Design & Frontend Development",
+          "duration": "4 Days",
+          "cost": 12000,
+          "deliverable": "Working landing page on test link"
+        },
+        {
+          "id": "m-3",
+          "title": "Tracking & Ad Account Hookup",
+          "duration": "3 Days",
+          "cost": 6000,
+          "deliverable": "Live production page with verified pixels"
+        }
+      ],
+      "pricingItems": [
+        {
+          "id": "p-1",
+          "title": "Conversion Copy & Funnel Architecture",
+          "quantity": 1,
+          "rate": 10000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 11800
+        },
+        {
+          "id": "p-2",
+          "title": "Responsive UI Engineering",
+          "quantity": 1,
+          "rate": 12000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 14160
+        },
+        {
+          "id": "p-3",
+          "title": "Tracking & Lead Pipeline Integration",
+          "quantity": 1,
+          "rate": 6000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 7080
+        }
+      ],
+      "terms": "50% upfront deposit, 50% on final page activation."
+    }
+  },
+  {
+    "id": "website-maintenance-hosting",
+    "title": "Website Maintenance & Hosting",
+    "category": "Website Development",
+    "shortDescription": "24/7 uptime monitoring, daily cloud backups, security hardening, and on-demand tech support.",
+    "fullDescription": "Proactive website management so your business never experiences downtime, malware attacks, or broken checkouts.",
+    "typicalDeliverables": [
+      "Cloud Server Hosting",
+      "Daily Automated Backups",
+      "Security & Patch Updates",
+      "10 Hrs Dedicated Support/Mo"
+    ],
+    "startingRate": 18000,
+    "duration": "Monthly Retainer",
+    "defaultInvoice": {
+      "items": [
+        {
+          "id": "inv-wm-1",
+          "serviceTitle": "Managed Cloud Hosting & Daily Backups Retainer",
+          "description": "High-availability cloud hosting, SSL renewal, daily offsite backups, and uptime monitoring.",
+          "quantity": 1,
+          "rate": 10000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 11800
+        },
+        {
+          "id": "inv-wm-2",
+          "serviceTitle": "Technical Maintenance & Security Retainer",
+          "description": "Security patches, plugin updates, database optimization, and up to 10 hours monthly development support.",
+          "quantity": 1,
+          "rate": 8000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 9440
+        }
+      ],
+      "notes": "Monthly maintenance cycle active. Support ticket queue accessible via email.",
+      "terms": "Monthly billing. Payment due on the 1st of each service month.",
+      "taxRate": 18
+    },
+    "defaultProposal": {
+      "title": "Comprehensive Website Maintenance, Cloud Hosting & Security Retainer",
+      "summary": "Full-service technical guardianship for your digital infrastructure, guaranteeing 99.9% uptime, airtight security protection, and on-call engineering support.",
+      "scopeOfWork": [
+        "Enterprise cloud hosting with daily offsite backups",
+        "Proactive security patching and malware scanning",
+        "Core Web Vitals monitoring and database defragmentation",
+        "10 dedicated developer hours each month for feature tweaks and content updates"
+      ],
+      "sections": [
+        {
+          "id": "sec-1",
+          "title": "Zero-Downtime Guarantee",
+          "content": "Automated uptime checks pinging your server every 60 seconds. Instant failover restores service before customers notice."
+        },
+        {
+          "id": "sec-2",
+          "title": "Developer On-Demand",
+          "content": "Skip the hassle of hiring freelancers for banner updates or form changes. Our team implements updates within 24 hours."
+        },
+        {
+          "id": "sec-3",
+          "title": "Monthly Reporting",
+          "content": "Receive a transparent monthly health report detailing site speed, traffic health, and security defense metrics."
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m-1",
+          "title": "Server Migration & Hardening Setup",
+          "duration": "Week 1",
+          "cost": 6000,
+          "deliverable": "Clean server setup & backup routine"
+        },
+        {
+          "id": "m-2",
+          "title": "Ongoing Monthly Support & Optimization",
+          "duration": "Monthly",
+          "cost": 12000,
+          "deliverable": "10 hours development & proactive monitoring"
+        }
+      ],
+      "pricingItems": [
+        {
+          "id": "p-1",
+          "title": "Cloud Infrastructure & Backup Engine",
+          "quantity": 1,
+          "rate": 10000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 11800
+        },
+        {
+          "id": "p-2",
+          "title": "Engineering Support Retainer (10 Hrs)",
+          "quantity": 1,
+          "rate": 8000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 9440
+        }
+      ],
+      "terms": "Billed monthly in advance. Cancel anytime with 30 days written notice."
+    }
+  }
+]

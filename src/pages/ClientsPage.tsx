@@ -486,10 +486,10 @@ export const ClientsPage: React.FC<ClientsPageProps> = ({
                 </div>
               </div>
 
-              {/* Service Selection from 25 DigiCoyotes Capabilities */}
+              {/* Service Selection from Digital Coyotes Capabilities */}
               <div className="space-y-1.5">
                 <label className="text-slate-400 block">
-                  Subscribed DigiCoyotes Services (Select all that apply):
+                  Subscribed Services ({DIGICOYOTES_SERVICES.length} Available):
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5 max-h-40 overflow-y-auto p-2 rounded-lg bg-slate-950 border border-slate-800">
                   {DIGICOYOTES_SERVICES.map((svc) => {

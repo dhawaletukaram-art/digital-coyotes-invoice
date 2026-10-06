@@ -158,10 +158,11 @@ export default function App() {
     });
 
     if (isNew) {
+      const curr = invoice.currency || '₹';
       await recordHistoryEvent({
         type: 'invoice_created',
         title: `Invoice Generated: ${invoice.invoiceNumber}`,
-        description: `Billed ${invoice.clientName} for $${invoice.total.toLocaleString()} due ${invoice.dueDate}.`,
+        description: `Billed ${invoice.clientName} for ${curr}${invoice.total.toLocaleString('en-IN')} due ${invoice.dueDate}.`,
         referenceId: invoice.id,
         actor: userProfile.name,
         statusBadge: invoice.status,
@@ -191,10 +192,11 @@ export default function App() {
     });
 
     if (isNew) {
+      const curr = proposal.currency || '₹';
       await recordHistoryEvent({
         type: 'proposal_created',
         title: `Proposal Drafted: ${proposal.proposalNumber}`,
-        description: `Created proposal "${proposal.title}" for ${proposal.clientName} ($${proposal.totalValue.toLocaleString()}).`,
+        description: `Created proposal "${proposal.title}" for ${proposal.clientName} (${curr}${proposal.totalValue.toLocaleString('en-IN')}).`,
         referenceId: proposal.id,
         actor: userProfile.name,
         statusBadge: proposal.status,

@@ -1,0 +1,1351 @@
+[
+  {
+    "id": "youtube-management",
+    "title": "YouTube Management",
+    "category": "Social Media Marketing",
+    "shortDescription": "Full-service YouTube channel management, retention-focused editing, SEO titles, and CTR thumbnails.",
+    "fullDescription": "Transforming your YouTube channel into an authoritative customer acquisition engine with high-retention video production, algorithmic packaging, and community growth.",
+    "typicalDeliverables": [
+      "8 Video Edits / Month",
+      "High-CTR Custom Thumbnails",
+      "Keyword-Optimized Metadata",
+      "Community Tab Management"
+    ],
+    "startingRate": 65000,
+    "duration": "Monthly Retainer",
+    "isPopular": true,
+    "defaultInvoice": {
+      "items": [
+        {
+          "id": "inv-yt-1",
+          "serviceTitle": "YouTube Video Editing & Packaging (8 Videos)",
+          "description": "High-retention storytelling, sound design, motion graphics, and click-optimized thumbnails.",
+          "quantity": 1,
+          "rate": 45000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 53100
+        },
+        {
+          "id": "inv-yt-2",
+          "serviceTitle": "YouTube SEO & Channel Growth Retainer",
+          "description": "Search-optimized titles, descriptions, chapters, tags, and weekly analytics review.",
+          "quantity": 1,
+          "rate": 20000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 23600
+        }
+      ],
+      "notes": "Monthly YouTube production cycle active. Raw footage pipeline established.",
+      "terms": "Monthly retainer. Due on the 5th of each calendar month.",
+      "taxRate": 18
+    },
+    "defaultProposal": {
+      "title": "YouTube Channel Growth Acceleration & Authority Engine",
+      "summary": "Full-stack YouTube management engineered to maximize watch time, subscriber conversions, and long-term search rankings for high-ticket brand positioning.",
+      "scopeOfWork": [
+        "Editorial calendar with high-intent topic selection",
+        "Hook-driven retention video editing with dynamic motion graphics",
+        "A/B thumbnail testing and psychological title crafting",
+        "End screen, playlist, and community engagement workflows"
+      ],
+      "sections": [
+        {
+          "id": "sec-1",
+          "title": "The YouTube Advantage",
+          "content": "YouTube content compounds forever. A single optimized video continues driving qualified customers years after publishing."
+        },
+        {
+          "id": "sec-2",
+          "title": "Production Standards",
+          "content": "4K timeline editing, calibrated color grading, licensed audio, and kinetic subtitle lower thirds."
+        },
+        {
+          "id": "sec-3",
+          "title": "Monthly Cadence",
+          "content": "2 long-form videos published weekly with accompanying YouTube Shorts cutdowns."
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m-1",
+          "title": "Channel Audit & Packaging System",
+          "duration": "Week 1",
+          "cost": 20000,
+          "deliverable": "Visual identity template & first 4 video outlines"
+        },
+        {
+          "id": "m-2",
+          "title": "Month 1 Video Production",
+          "duration": "Weeks 2-4",
+          "cost": 30000,
+          "deliverable": "8 polished long-form videos & custom thumbnails"
+        },
+        {
+          "id": "m-3",
+          "title": "Analytics Optimization & Community",
+          "duration": "Ongoing",
+          "cost": 15000,
+          "deliverable": "Retention analysis & next month topic matrix"
+        }
+      ],
+      "pricingItems": [
+        {
+          "id": "p-1",
+          "title": "Video Editing & Motion Graphics (8x)",
+          "quantity": 1,
+          "rate": 35000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 41300
+        },
+        {
+          "id": "p-2",
+          "title": "Thumbnails & Packaging Strategy",
+          "quantity": 1,
+          "rate": 15000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 17700
+        },
+        {
+          "id": "p-3",
+          "title": "SEO Metadata & Distribution",
+          "quantity": 1,
+          "rate": 15000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 17700
+        }
+      ],
+      "terms": "Monthly retainer billed in advance. Raw footage delivered via Google Drive/Dropbox."
+    }
+  },
+  {
+    "id": "social-media-marketing",
+    "title": "Social Media Marketing",
+    "category": "Social Media Marketing",
+    "shortDescription": "Omni-channel social media management across Instagram, LinkedIn, and Facebook to build engaged brand communities.",
+    "fullDescription": "Consistent, high-aesthetic social media presence combining viral short-form video reels, authoritative carousel guides, and community interaction.",
+    "typicalDeliverables": [
+      "20 Branded Visual Assets",
+      "8 Reels / Shorts",
+      "Copywriting & Hashtag Matrix",
+      "Community DM/Comment Handling"
+    ],
+    "startingRate": 55000,
+    "duration": "Monthly Retainer",
+    "isPopular": true,
+    "defaultInvoice": {
+      "items": [
+        {
+          "id": "inv-smm-1",
+          "serviceTitle": "Social Media Content Production (20 Posts + 8 Reels)",
+          "description": "High-fidelity graphics, animated carousel slides, and short-form video edits with captions.",
+          "quantity": 1,
+          "rate": 35000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 41300
+        },
+        {
+          "id": "inv-smm-2",
+          "serviceTitle": "Social Publishing, Copywriting & Community Engagement",
+          "description": "Strategic copywriting, optimal scheduling, hashtag architecture, and daily audience engagement.",
+          "quantity": 1,
+          "rate": 20000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 23600
+        }
+      ],
+      "notes": "Monthly social calendar executed. Content approval queue synced in Notion.",
+      "terms": "Net 15 days terms. Invoiced monthly in advance.",
+      "taxRate": 18
+    },
+    "defaultProposal": {
+      "title": "Omni-Channel Social Media Dominance & Brand Advocacy Architecture",
+      "summary": "Transforming social media profiles from stagnant bulletin boards into vibrant, highly active acquisition channels that attract loyal brand advocates.",
+      "scopeOfWork": [
+        "Monthly content calendar with brand-aligned themes",
+        "Short-form video creation and reel trend leveraging",
+        "Thought leadership carousels and industry commentary",
+        "Active community engagement to convert followers into DMs and sales"
+      ],
+      "sections": [
+        {
+          "id": "sec-1",
+          "title": "Strategy Focus",
+          "content": "Focus on high-value interactions over vanity metrics. Every post is built to educate, entertain, or convert."
+        },
+        {
+          "id": "sec-2",
+          "title": "Multi-Platform Distribution",
+          "content": "Tailored adaptations for Instagram (visual reels), LinkedIn (thought leadership), and Facebook (community)."
+        },
+        {
+          "id": "sec-3",
+          "title": "Monthly Workflow",
+          "content": "Full monthly calendar presented on the 25th of preceding month for 1-click client approval."
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m-1",
+          "title": "Brand Voice & Visual Styleguide",
+          "duration": "Week 1",
+          "cost": 15000,
+          "deliverable": "Approved design template suite & content themes"
+        },
+        {
+          "id": "m-2",
+          "title": "Content Production Sprint",
+          "duration": "Weeks 2-3",
+          "cost": 25000,
+          "deliverable": "Batch production of 28 creative assets"
+        },
+        {
+          "id": "m-3",
+          "title": "Community Growth & Trend Hijacking",
+          "duration": "Week 4",
+          "cost": 15000,
+          "deliverable": "Active publishing & monthly growth analytics"
+        }
+      ],
+      "pricingItems": [
+        {
+          "id": "p-1",
+          "title": "Visual Asset & Carousel Suite",
+          "quantity": 1,
+          "rate": 25000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 29500
+        },
+        {
+          "id": "p-2",
+          "title": "Reel & Short-Form Video Editing",
+          "quantity": 1,
+          "rate": 20000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 23600
+        },
+        {
+          "id": "p-3",
+          "title": "Distribution & Engagement",
+          "quantity": 1,
+          "rate": 10000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 11800
+        }
+      ],
+      "terms": "Retainer billed monthly. Content approved via digital staging calendar."
+    }
+  },
+  {
+    "id": "influencer-marketing",
+    "title": "Influencer Marketing",
+    "category": "Social Media Marketing",
+    "shortDescription": "Curated creator partnerships, contracts, and viral product placement across Instagram & YouTube.",
+    "fullDescription": "Connecting your brand with authentic creators who command loyal audience trust, driving high-converting social proof and sales.",
+    "typicalDeliverables": [
+      "10 Vetted Creator Partnerships",
+      "Contract & Legal Rights",
+      "Creative Briefs & Review",
+      "Attribution Tracking Dossier"
+    ],
+    "startingRate": 75000,
+    "duration": "4-6 weeks",
+    "defaultInvoice": {
+      "items": [
+        {
+          "id": "inv-inf-1",
+          "serviceTitle": "Creator Scouting, Vetting & Outreach",
+          "description": "Discovery and audience audit of 10 creators matching target demographic and engagement thresholds.",
+          "quantity": 1,
+          "rate": 35000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 41300
+        },
+        {
+          "id": "inv-inf-2",
+          "serviceTitle": "Campaign Execution, Rights Licensing & Reporting",
+          "description": "Contract negotiation, briefing, content review, paid whitelisting rights, and tracked ROI report.",
+          "quantity": 1,
+          "rate": 40000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 47200
+        }
+      ],
+      "notes": "Influencer campaign delivered. Creator licensing rights archived.",
+      "terms": "Agency management fee invoiced. Creator payouts disbursed per contract schedule.",
+      "taxRate": 18
+    },
+    "defaultProposal": {
+      "title": "Tier-1 Creator Partnerships & Viral Product Placement Campaign",
+      "summary": "Orchestrating high-impact creator collaborations that generate authentic social proof, viral brand discovery, and reusable user-generated content (UGC).",
+      "scopeOfWork": [
+        "Audience authenticity verification (eliminating fake follower bots)",
+        "Contract negotiation including 90-day digital advertising usage rights",
+        "Creative brief direction ensuring natural product integration",
+        "Campaign launch coordination and UTM conversion tracking"
+      ],
+      "sections": [
+        {
+          "id": "sec-1",
+          "title": "Why Creator Marketing",
+          "content": "Modern buyers ignore polished corporate ads. Peer recommendations from trusted creators convert at 4x higher rates."
+        },
+        {
+          "id": "sec-2",
+          "title": "Content Licensing",
+          "content": "All creator assets include commercial licensing allowing our performance team to turn them into high-ROAS Meta ads."
+        },
+        {
+          "id": "sec-3",
+          "title": "Milestone Schedule",
+          "content": "5 weeks from creator outreach to final published content and tracking report."
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m-1",
+          "title": "Creator Shortlisting & Negotiations",
+          "duration": "2 Weeks",
+          "cost": 25000,
+          "deliverable": "10 confirmed signed creator agreements"
+        },
+        {
+          "id": "m-2",
+          "title": "Content Production & Review",
+          "duration": "2 Weeks",
+          "cost": 30000,
+          "deliverable": "Approved creator drafts ready for publication"
+        },
+        {
+          "id": "m-3",
+          "title": "Campaign Launch & ROI Report",
+          "duration": "1 Week",
+          "cost": 20000,
+          "deliverable": "Live posts, engagement tracking & content vault"
+        }
+      ],
+      "pricingItems": [
+        {
+          "id": "p-1",
+          "title": "Talent Scouting & Negotiation",
+          "quantity": 1,
+          "rate": 25000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 29500
+        },
+        {
+          "id": "p-2",
+          "title": "Creative Direction & Briefing",
+          "quantity": 1,
+          "rate": 30000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 35400
+        },
+        {
+          "id": "p-3",
+          "title": "Rights Licensing & Performance Dossier",
+          "quantity": 1,
+          "rate": 20000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 23600
+        }
+      ],
+      "terms": "50% upfront retainer, 50% upon completed content broadcast."
+    }
+  },
+  {
+    "id": "meta-ads",
+    "title": "Meta Ads (Facebook & Instagram)",
+    "category": "Performance Marketing",
+    "shortDescription": "Algorithmic paid ad campaigns across Meta with multi-variant creative testing and server-side CAPI tracking.",
+    "fullDescription": "Precision performance advertising combining dynamic creative testing, broad audience machine-learning signals, and aggressive retargeting funnels.",
+    "typicalDeliverables": [
+      "Pixel & Conversions API Setup",
+      "8 Ad Creative Variants",
+      "Campaign Architecture (CBO/ABO)",
+      "Weekly ROAS Reporting"
+    ],
+    "startingRate": 45000,
+    "duration": "Monthly Retainer",
+    "isPopular": true,
+    "defaultInvoice": {
+      "items": [
+        {
+          "id": "inv-meta-1",
+          "serviceTitle": "Meta Ads Campaign Management & Media Buying",
+          "description": "Campaign structuring, daily bid management, audience exclusions, and budget scaling.",
+          "quantity": 1,
+          "rate": 25000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 29500
+        },
+        {
+          "id": "inv-meta-2",
+          "serviceTitle": "Meta Creative Studio & CAPI Tracking Suite",
+          "description": "Production of 8 visual/video ad creatives, copy variations, and server-side Conversions API sync.",
+          "quantity": 1,
+          "rate": 20000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 23600
+        }
+      ],
+      "notes": "Meta advertising retainer active. Ad spend paid directly to Meta via client payment card.",
+      "terms": "Monthly agency fee. Due in advance on the 1st of each month.",
+      "taxRate": 18
+    },
+    "defaultProposal": {
+      "title": "Meta Paid Acquisition Engine & Scalable ROAS Funnel",
+      "summary": "Building a predictive, profitable paid advertising machine across Instagram and Facebook designed to achieve predictable customer acquisition with high return on ad spend.",
+      "scopeOfWork": [
+        "Server-side Conversions API (CAPI) setup for 100% signal capture",
+        "Iterative creative testing engine to prevent ad fatigue",
+        "Broad targeting and Lookalike audience calibration",
+        "Real-time Google Looker Studio dashboard tracking CAC and ROAS"
+      ],
+      "sections": [
+        {
+          "id": "sec-1",
+          "title": "Performance Philosophy",
+          "content": "Creative is the new targeting. We produce high-velocity creative variations to find breakout ad winners that scale profitably."
+        },
+        {
+          "id": "sec-2",
+          "title": "Full-Funnel Structure",
+          "content": "Top of Funnel (Hook/Discovery), Middle of Funnel (Social proof/Demo), Bottom of Funnel (Offer/Scarcity)."
+        },
+        {
+          "id": "sec-3",
+          "title": "Scaling Guardrails",
+          "content": "Disciplined budget scaling rules to protect margins and prevent unprofitable spikes in acquisition costs."
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m-1",
+          "title": "Technical Setup & CAPI Audit",
+          "duration": "Week 1",
+          "cost": 15000,
+          "deliverable": "Airtight pixel tracking & campaign blueprint"
+        },
+        {
+          "id": "m-2",
+          "title": "Creative Testing Sprint",
+          "duration": "Weeks 2-3",
+          "cost": 20000,
+          "deliverable": "Launch of 8 creative variants across audiences"
+        },
+        {
+          "id": "m-3",
+          "title": "Scaling & ROAS Maximization",
+          "duration": "Week 4",
+          "cost": 10000,
+          "deliverable": "Budget reallocation to top 20% winning ads"
+        }
+      ],
+      "pricingItems": [
+        {
+          "id": "p-1",
+          "title": "Tracking & Campaign Architecture",
+          "quantity": 1,
+          "rate": 15000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 17700
+        },
+        {
+          "id": "p-2",
+          "title": "Creative Asset Production (8x)",
+          "quantity": 1,
+          "rate": 20000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 23600
+        },
+        {
+          "id": "p-3",
+          "title": "Live Media Buying & Optimization",
+          "quantity": 1,
+          "rate": 10000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 11800
+        }
+      ],
+      "terms": "Monthly agency management fee. Ad spend funded directly through client ad account."
+    }
+  },
+  {
+    "id": "google-ads",
+    "title": "Google Ads",
+    "category": "Performance Marketing",
+    "shortDescription": "High-intent Google Search and Performance Max campaigns targeting buyers at the moment of intent.",
+    "fullDescription": "Capturing ready-to-buy prospects with precision keyword clusters, negative keyword scrubbing, and conversion-optimized ad extensions.",
+    "typicalDeliverables": [
+      "Search Intent Keyword Matrix",
+      "Performance Max Setup",
+      "Negative Keyword Exclusions",
+      "Call & Conversion Tracking"
+    ],
+    "startingRate": 50000,
+    "duration": "Monthly Retainer",
+    "isPopular": true,
+    "defaultInvoice": {
+      "items": [
+        {
+          "id": "inv-gads-1",
+          "serviceTitle": "Google Ads Campaign Setup & Management",
+          "description": "High-intent Search, PMax, and remarketing campaigns with smart bid automation.",
+          "quantity": 1,
+          "rate": 30000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 35400
+        },
+        {
+          "id": "inv-gads-2",
+          "serviceTitle": "Conversion Tracking & Negative Keyword Scrubbing",
+          "description": "Google Tag Manager conversion sync, call tracking, and ongoing search term query pruning.",
+          "quantity": 1,
+          "rate": 20000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 23600
+        }
+      ],
+      "notes": "Google Ads retainer active. Direct ad spend billed to client billing card.",
+      "terms": "Billed monthly in advance. 14 days payment terms.",
+      "taxRate": 18
+    },
+    "defaultProposal": {
+      "title": "High-Intent Google Search & Performance Max Acquisition Engine",
+      "summary": "Dominating high-intent search queries to capture active buyers ready to purchase, converting clicks into qualified phone calls and leads.",
+      "scopeOfWork": [
+        "Commercial intent keyword clustering and competitor bidding",
+        "Performance Max asset groups with high-CTR copy and visuals",
+        "Strict negative keyword lists to prevent wasted ad budget",
+        "Conversion value tracking integrated with Google Analytics 4"
+      ],
+      "sections": [
+        {
+          "id": "sec-1",
+          "title": "Capturing Intent",
+          "content": "Google search users are actively looking for a solution right now. We position your brand as the obvious first choice."
+        },
+        {
+          "id": "sec-2",
+          "title": "Negative Keyword Shielding",
+          "content": "Continuous auditing to eliminate irrelevant search terms, saving up to 30% of typical ad waste."
+        },
+        {
+          "id": "sec-3",
+          "title": "Performance Reporting",
+          "content": "Weekly conversion transparency showing exact cost-per-lead and pipeline generation."
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m-1",
+          "title": "Keyword Intent Mining & Setup",
+          "duration": "Week 1",
+          "cost": 18000,
+          "deliverable": "Approved keyword matrix & GTM tracking sync"
+        },
+        {
+          "id": "m-2",
+          "title": "Campaign Launch & Bid Calibration",
+          "duration": "Weeks 2-3",
+          "cost": 20000,
+          "deliverable": "Live search & PMax campaigns with ad copy"
+        },
+        {
+          "id": "m-3",
+          "title": "Scaling & Quality Score Optimization",
+          "duration": "Week 4",
+          "cost": 12000,
+          "deliverable": "High quality scores and CPA reduction report"
+        }
+      ],
+      "pricingItems": [
+        {
+          "id": "p-1",
+          "title": "Intent Research & Account Structure",
+          "quantity": 1,
+          "rate": 18000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 21240
+        },
+        {
+          "id": "p-2",
+          "title": "Campaign Launch & Copywriting",
+          "quantity": 1,
+          "rate": 20000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 23600
+        },
+        {
+          "id": "p-3",
+          "title": "Ongoing Bid Optimization & Scaling",
+          "quantity": 1,
+          "rate": 12000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 14160
+        }
+      ],
+      "terms": "Monthly retainer. Client maintains direct ownership of Google Ads account."
+    }
+  },
+  {
+    "id": "youtube-ads",
+    "title": "YouTube Ads",
+    "category": "Performance Marketing",
+    "shortDescription": "High-production video action ads that captivate audiences in 5 seconds and drive direct conversions.",
+    "fullDescription": "Performance-tuned video advertising placing your offer in front of targeted YouTube viewers before videos from competitors or industry leaders.",
+    "typicalDeliverables": [
+      "Direct-Response Video Scripts",
+      "Skippable In-Stream Ads",
+      "Channel Placement Exclusions",
+      "View-Through Attribution"
+    ],
+    "startingRate": 48000,
+    "duration": "Monthly Retainer",
+    "defaultInvoice": {
+      "items": [
+        {
+          "id": "inv-ytads-1",
+          "serviceTitle": "YouTube Video Ads Campaign Architecture",
+          "description": "Targeted placement selection, custom intent audience clusters, and video action campaigns.",
+          "quantity": 1,
+          "rate": 28000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 33040
+        },
+        {
+          "id": "inv-ytads-2",
+          "serviceTitle": "Direct-Response Video Scripting & Analytics",
+          "description": "Hook-testing video scripts, end screen call-to-actions, and view-through conversion modeling.",
+          "quantity": 1,
+          "rate": 20000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 23600
+        }
+      ],
+      "notes": "YouTube Video Ad campaigns active. Attribution reporting live in Google Ads console.",
+      "terms": "Payment due within 15 days.",
+      "taxRate": 18
+    },
+    "defaultProposal": {
+      "title": "YouTube Video Performance Advertising & Video Action Funnel",
+      "summary": "Deploying high-converting video ads on YouTube that hook viewers in the first 5 seconds to generate qualified pipeline at scale.",
+      "scopeOfWork": [
+        "Psychological video script frameworks designed to stop skippers",
+        "In-Stream video action campaigns targeting competitor video URLs",
+        "Exclusion lists eliminating low-intent gaming and kids content",
+        "View-through attribution modeling to assess full customer journeys"
+      ],
+      "sections": [
+        {
+          "id": "sec-1",
+          "title": "The Power of Video",
+          "content": "Video builds trust faster than static text. Prospects hear your voice, see your offer, and understand your unique value."
+        },
+        {
+          "id": "sec-2",
+          "title": "Hook Formulation",
+          "content": "First 5 seconds disqualify uninterested viewers for zero ad cost, while captivating perfect buyers."
+        },
+        {
+          "id": "sec-3",
+          "title": "Targeting Precision",
+          "content": "Target viewers watching videos about exact problems your product solves."
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m-1",
+          "title": "Script Frameworks & Audience Slicing",
+          "duration": "Week 1",
+          "cost": 16000,
+          "deliverable": "Approved video scripts & target placement list"
+        },
+        {
+          "id": "m-2",
+          "title": "Campaign Launch & Live Testing",
+          "duration": "Weeks 2-3",
+          "cost": 20000,
+          "deliverable": "Active video runs with conversion tracking"
+        },
+        {
+          "id": "m-3",
+          "title": "CPA Optimization & Scale",
+          "duration": "Week 4",
+          "cost": 12000,
+          "deliverable": "Cost-per-acquisition reduction & report"
+        }
+      ],
+      "pricingItems": [
+        {
+          "id": "p-1",
+          "title": "Scriptwriting & Storyboard Blueprint",
+          "quantity": 1,
+          "rate": 16000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 18880
+        },
+        {
+          "id": "p-2",
+          "title": "Campaign Setup & Placement Shielding",
+          "quantity": 1,
+          "rate": 20000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 23600
+        },
+        {
+          "id": "p-3",
+          "title": "Attribution Modeling & Media Buying",
+          "quantity": 1,
+          "rate": 12000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 14160
+        }
+      ],
+      "terms": "Retainer billed monthly. Production assets approved prior to ad rollout."
+    }
+  },
+  {
+    "id": "lead-generation-campaigns",
+    "title": "Lead Generation Campaigns",
+    "category": "Performance Marketing",
+    "shortDescription": "Turnkey multi-channel lead acquisition funnels delivering verified, sales-ready prospects.",
+    "fullDescription": "Comprehensive lead generation systems combining paid ad distribution, qualifying questionnaires, instant SMS/WhatsApp alerts, and CRM synchronization.",
+    "typicalDeliverables": [
+      "Lead Magnet / Offer Design",
+      "Qualifying Intake Funnel",
+      "Instant WhatsApp / SMS Alerts",
+      "CRM Auto-Enrichment Sync"
+    ],
+    "startingRate": 60000,
+    "duration": "Monthly Retainer",
+    "isPopular": true,
+    "defaultInvoice": {
+      "items": [
+        {
+          "id": "inv-lead-1",
+          "serviceTitle": "Lead Generation Funnel Architecture & Paid Media",
+          "description": "High-converting intake questionnaire, lead magnet delivery, and paid ad campaign distribution.",
+          "quantity": 1,
+          "rate": 35000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 41300
+        },
+        {
+          "id": "inv-lead-2",
+          "serviceTitle": "Speed-to-Lead Automation & CRM Webhook Pipeline",
+          "description": "Instant SMS/WhatsApp notification to sales reps, lead deduplication, and CRM data enrichment.",
+          "quantity": 1,
+          "rate": 25000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 29500
+        }
+      ],
+      "notes": "Lead funnel operational. Leads delivering real-time to configured CRM webhook.",
+      "terms": "Monthly retainer. Due on the 1st of each service cycle.",
+      "taxRate": 18
+    },
+    "defaultProposal": {
+      "title": "Omnichannel Qualified Lead Generation Engine & Instant Dispatch Suite",
+      "summary": "Building an automated lead generation machine that consistently captures, scores, and delivers verified sales-ready prospects straight to your sales team.",
+      "scopeOfWork": [
+        "High-value offer formulation and interactive qualifying questionnaire",
+        "Paid traffic orchestration across Meta and Google Search",
+        "Sub-60-second speed-to-lead automation notifying reps via WhatsApp",
+        "CRM pipeline integration with automated email follow-up drip sequence"
+      ],
+      "sections": [
+        {
+          "id": "sec-1",
+          "title": "The Speed-to-Lead Advantage",
+          "content": "Calling leads within 5 minutes increases conversion rates by 391%. Our automation puts lead contact details on your phone in 10 seconds."
+        },
+        {
+          "id": "sec-2",
+          "title": "Qualification Gates",
+          "content": "Filtering out tire-kickers with multi-step qualifying questions before leads reach your team."
+        },
+        {
+          "id": "sec-3",
+          "title": "Pipeline Predictability",
+          "content": "Transforming chaotic manual prospecting into a steady, reliable stream of inbound conversations."
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m-1",
+          "title": "Funnel Offer & Intake Form Build",
+          "duration": "Week 1",
+          "cost": 20000,
+          "deliverable": "Approved lead magnet & qualification form"
+        },
+        {
+          "id": "m-2",
+          "title": "Paid Ad Campaign Launch",
+          "duration": "Weeks 2-3",
+          "cost": 25000,
+          "deliverable": "Live ad campaigns driving lead flow"
+        },
+        {
+          "id": "m-3",
+          "title": "Speed-to-Lead & CRM Automation",
+          "duration": "Week 4",
+          "cost": 15000,
+          "deliverable": "Instant WhatsApp alert system & CRM sync"
+        }
+      ],
+      "pricingItems": [
+        {
+          "id": "p-1",
+          "title": "Offer Design & Qualification Funnel",
+          "quantity": 1,
+          "rate": 20000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 23600
+        },
+        {
+          "id": "p-2",
+          "title": "Multi-Channel Media Buying",
+          "quantity": 1,
+          "rate": 25000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 29500
+        },
+        {
+          "id": "p-3",
+          "title": "Speed-to-Lead Automation Hook",
+          "quantity": 1,
+          "rate": 15000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 17700
+        }
+      ],
+      "terms": "Monthly retainer. Minimum 3-month commitment recommended for maximum calibration."
+    }
+  },
+  {
+    "id": "remarketing-campaigns",
+    "title": "Remarketing Campaigns",
+    "category": "Performance Marketing",
+    "shortDescription": "Dynamic cross-network retargeting across Meta and Google to convert lost website visitors.",
+    "fullDescription": "Re-engaging the 98% of visitors who left without buying using objection-handling ad creative and timely promotional incentives.",
+    "typicalDeliverables": [
+      "Multi-Network Cookie Pooling",
+      "Dynamic Product Ads",
+      "Objection Handling Sequences",
+      "Frequency Capping Setup"
+    ],
+    "startingRate": 35000,
+    "duration": "Monthly Retainer",
+    "defaultInvoice": {
+      "items": [
+        {
+          "id": "inv-rem-1",
+          "serviceTitle": "Cross-Platform Remarketing Strategy & Setup",
+          "description": "Audience segmentation by intent level (Cart abandoners, page viewers, past purchasers).",
+          "quantity": 1,
+          "rate": 20000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 23600
+        },
+        {
+          "id": "inv-rem-2",
+          "serviceTitle": "Dynamic Creative Banners & Frequency Tuning",
+          "description": "Banner design across all standard sizes, frequency capping, and fatigue monitoring.",
+          "quantity": 1,
+          "rate": 15000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 17700
+        }
+      ],
+      "notes": "Remarketing campaigns active across Google Display and Meta.",
+      "terms": "Net 14 days payment terms.",
+      "taxRate": 18
+    },
+    "defaultProposal": {
+      "title": "Full-Funnel Retargeting & Revenue Recovery Machine",
+      "summary": "Recovering lost pipeline by surrounding unconverted website visitors with persuasive social proof, testimonials, and time-sensitive offers.",
+      "scopeOfWork": [
+        "Audience pool segmentation based on time elapsed and pages visited",
+        "Dynamic product remarketing displaying exact items viewed",
+        "Cross-network distribution across Meta, Google Display Network & YouTube",
+        "Frequency capping rules to prevent annoying prospects"
+      ],
+      "sections": [
+        {
+          "id": "sec-1",
+          "title": "Revenue Leakage",
+          "content": "You already paid to get visitors to your site. Remarketing unlocks the hidden ROI of your existing traffic at 1/5th the acquisition cost."
+        },
+        {
+          "id": "sec-2",
+          "title": "Sequential Storytelling",
+          "content": "Day 1-3: Reminder & Social Proof. Day 4-7: FAQ & Objection Handling. Day 8-14: Incentive / Limited Offer."
+        },
+        {
+          "id": "sec-3",
+          "title": "High Margin Returns",
+          "content": "Remarketing consistently delivers the highest ROAS across the entire digital marketing stack."
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m-1",
+          "title": "Audience Segmentation & Pixel Check",
+          "duration": "Week 1",
+          "cost": 12000,
+          "deliverable": "Custom audience pools & exclusion rules"
+        },
+        {
+          "id": "m-2",
+          "title": "Dynamic Creative Deployment",
+          "duration": "Weeks 2-3",
+          "cost": 15000,
+          "deliverable": "Multi-size banner & video ad launch"
+        },
+        {
+          "id": "m-3",
+          "title": "Frequency Capping & ROAS Tuning",
+          "duration": "Week 4",
+          "cost": 8000,
+          "deliverable": "Final conversion report & retargeting ROI"
+        }
+      ],
+      "pricingItems": [
+        {
+          "id": "p-1",
+          "title": "Audience Mapping & Segment Setup",
+          "quantity": 1,
+          "rate": 12000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 14160
+        },
+        {
+          "id": "p-2",
+          "title": "Sequential Creative Suite",
+          "quantity": 1,
+          "rate": 15000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 17700
+        },
+        {
+          "id": "p-3",
+          "title": "Cross-Network Campaign Management",
+          "quantity": 1,
+          "rate": 8000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 9440
+        }
+      ],
+      "terms": "Monthly retainer. Invoiced on the 1st of each service month."
+    }
+  },
+  {
+    "id": "seo-services",
+    "title": "SEO Services",
+    "category": "SEO, EO, GEO & Online Visibility",
+    "shortDescription": "Comprehensive technical SEO, Core Web Vitals, keyword architecture, and high-authority link acquisition.",
+    "fullDescription": "Holistic SEO strategy covering Core Web Vitals, entity graph indexing, high-intent backlink strategies, and conversion-focused content.",
+    "typicalDeliverables": [
+      "Technical SEO Audit",
+      "Keyword Matrix (50 Keywords)",
+      "Schema / Structured Data",
+      "Monthly Ranking Reports"
+    ],
+    "startingRate": 45000,
+    "duration": "Monthly Retainer",
+    "isPopular": true,
+    "defaultInvoice": {
+      "items": [
+        {
+          "id": "inv-seo-1",
+          "serviceTitle": "Technical SEO Health & Core Web Vitals Retainer",
+          "description": "Crawl error resolution, sitemap indexing, canonical tags, and page speed optimization.",
+          "quantity": 1,
+          "rate": 25000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 29500
+        },
+        {
+          "id": "inv-seo-2",
+          "serviceTitle": "On-Page Keyword Mapping & Authority Link Building",
+          "description": "Content optimization across 50 commercial keywords and high-DR backlink acquisition.",
+          "quantity": 1,
+          "rate": 20000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 23600
+        }
+      ],
+      "notes": "SEO monthly cycle active. Ranking tracking dashboard live in Google Search Console.",
+      "terms": "Monthly billing. Payment due within 15 days.",
+      "taxRate": 18
+    },
+    "defaultProposal": {
+      "title": "Search Engine Optimization & Organic Market Dominance Roadmap",
+      "summary": "Achieving sustainable page-one Google rankings through technical site architecture, semantic topical authority, and high-authority editorial outreach.",
+      "scopeOfWork": [
+        "Comprehensive technical audit fixing indexing barriers and Core Web Vitals",
+        "Semantic keyword research grouping high-intent search queries into topic clusters",
+        "Content optimization blueprints for priority commercial pages",
+        "White-hat editorial link building to grow domain authority"
+      ],
+      "sections": [
+        {
+          "id": "sec-1",
+          "title": "The Organic Moat",
+          "content": "Paid ads stop working the second you pause ad spend. Organic SEO builds an enduring customer acquisition asset that generates free leads 24/7."
+        },
+        {
+          "id": "sec-2",
+          "title": "Technical Rigor",
+          "content": "Eliminating duplicate content, optimizing crawl budget, and ensuring sub-second server response times."
+        },
+        {
+          "id": "sec-3",
+          "title": "Transparent Reporting",
+          "content": "Monthly rankings, organic traffic clicks, and inbound inquiry attribution reported openly."
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m-1",
+          "title": "Technical Site Health & CWV Fixes",
+          "duration": "Month 1",
+          "cost": 15000,
+          "deliverable": "100% clean Google Search Console health score"
+        },
+        {
+          "id": "m-2",
+          "title": "Topical Authority Content Silos",
+          "duration": "Month 1-2",
+          "cost": 18000,
+          "deliverable": "Optimized on-page keywords & schema markup"
+        },
+        {
+          "id": "m-3",
+          "title": "Authority Link Acquisition",
+          "duration": "Ongoing",
+          "cost": 12000,
+          "deliverable": "High-DR editorial backlinks and ranking gains"
+        }
+      ],
+      "pricingItems": [
+        {
+          "id": "p-1",
+          "title": "Technical Audit & Speed Optimization",
+          "quantity": 1,
+          "rate": 15000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 17700
+        },
+        {
+          "id": "p-2",
+          "title": "Semantic On-Page Content Silos",
+          "quantity": 1,
+          "rate": 18000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 21240
+        },
+        {
+          "id": "p-3",
+          "title": "High-Authority Link Outreach",
+          "quantity": 1,
+          "rate": 12000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 14160
+        }
+      ],
+      "terms": "Monthly retainer with 6-month recommended horizon for organic search compounding."
+    }
+  },
+  {
+    "id": "geo-ai-search",
+    "title": "GEO (Generative Engine Optimization)",
+    "category": "SEO, EO, GEO & Online Visibility",
+    "shortDescription": "Optimizing your brand to be cited and recommended across ChatGPT, Perplexity, Gemini, and Claude.",
+    "fullDescription": "Generative Engine Optimization (GEO) ensures your brand, products, and services appear as authoritative citations when users query conversational AI engines.",
+    "typicalDeliverables": [
+      "AI Search Citation Audit",
+      "Entity Disambiguation",
+      "Structured JSON-LD Graph",
+      "Perplexity & ChatGPT Benchmarking"
+    ],
+    "startingRate": 65000,
+    "duration": "3-4 weeks",
+    "isPopular": true,
+    "defaultInvoice": {
+      "items": [
+        {
+          "id": "inv-geo-1",
+          "serviceTitle": "Generative Engine Optimization (GEO) Audit & Schema",
+          "description": "AI crawler indexing verification, LLM sentiment mapping, and semantic Schema.org entity graph.",
+          "quantity": 1,
+          "rate": 35000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 41300
+        },
+        {
+          "id": "inv-geo-2",
+          "serviceTitle": "AI Citation Injection & Benchmark Validation",
+          "description": "Structured digital PR citations across authoritative sources indexed by ChatGPT, Claude, and Perplexity.",
+          "quantity": 1,
+          "rate": 30000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 35400
+        }
+      ],
+      "notes": "GEO optimization completed. AI response validation reports generated.",
+      "terms": "Net 15 days payment terms.",
+      "taxRate": 18
+    },
+    "defaultProposal": {
+      "title": "Generative Engine Optimization (GEO) & AI Search Primacy",
+      "summary": "Future-proofing your company for the AI search revolution by optimizing your brand to be cited and recommended as the #1 authority in ChatGPT, Perplexity, and Gemini.",
+      "scopeOfWork": [
+        "Benchmarking brand citations across OpenAI, Anthropic, Google & Perplexity LLMs",
+        "Entity disambiguation ensuring AI models understand your exact services",
+        "Structured JSON-LD schema injection optimized for LLM crawler parsing",
+        "Authoritative citation placements in high-weight training databases"
+      ],
+      "sections": [
+        {
+          "id": "sec-1",
+          "title": "The Shift to AI Search",
+          "content": "Over 50% of search traffic is moving from 10 blue links to AI synthesis. Being omitted from LLM answers means losing customers before they even visit a website."
+        },
+        {
+          "id": "sec-2",
+          "title": "Citation Engineering",
+          "content": "We structure your online presence so AI models treat your brand as the canonical factual answer for your industry."
+        },
+        {
+          "id": "sec-3",
+          "title": "Measurable Results",
+          "content": "Weekly testing prompts verifying that ChatGPT and Perplexity recommend your company by name."
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m-1",
+          "title": "AI Citation Audit & Entity Mapping",
+          "duration": "Week 1-2",
+          "cost": 25000,
+          "deliverable": "Baseline report across all major LLMs"
+        },
+        {
+          "id": "m-2",
+          "title": "Knowledge Graph & Schema Injection",
+          "duration": "Week 3",
+          "cost": 22000,
+          "deliverable": "Structured data deployed on website"
+        },
+        {
+          "id": "m-3",
+          "title": "Generative Benchmark Validation",
+          "duration": "Week 4",
+          "cost": 18000,
+          "deliverable": "Verified AI search appearances dossier"
+        }
+      ],
+      "pricingItems": [
+        {
+          "id": "p-1",
+          "title": "LLM Citation Audit & Model Mapping",
+          "quantity": 1,
+          "rate": 25000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 29500
+        },
+        {
+          "id": "p-2",
+          "title": "Semantic JSON-LD Entity Graph",
+          "quantity": 1,
+          "rate": 22000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 25960
+        },
+        {
+          "id": "p-3",
+          "title": "Digital Authority Citation Sprint",
+          "quantity": 1,
+          "rate": 18000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 21240
+        }
+      ],
+      "terms": "50% project kickoff, 50% upon verified AI citation report delivery."
+    }
+  },
+  {
+    "id": "entity-optimization-visibility",
+    "title": "Entity Optimization & Online Visibility",
+    "category": "SEO, EO, GEO & Online Visibility",
+    "shortDescription": "Claiming and cementing your brand in Google Knowledge Graph with Schema.org and Wikidata.",
+    "fullDescription": "Cementing your brand as an officially recognized entity in Google\u2019s Knowledge Vault for permanent brand search superiority and knowledge panel display.",
+    "typicalDeliverables": [
+      "Google Knowledge Panel Setup",
+      "Wikidata & SameAs Alignment",
+      "Organization & Founder Schema",
+      "Online Visibility Indexing"
+    ],
+    "startingRate": 50000,
+    "duration": "3-4 weeks",
+    "defaultInvoice": {
+      "items": [
+        {
+          "id": "inv-eo-1",
+          "serviceTitle": "Knowledge Graph Entity Mapping & Wikidata Setup",
+          "description": "Creation and verification of authoritative brand entity records in Wikidata and industry registries.",
+          "quantity": 1,
+          "rate": 28000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 33040
+        },
+        {
+          "id": "inv-eo-2",
+          "serviceTitle": "Comprehensive Entity Schema & Knowledge Panel Claiming",
+          "description": "SameAs graph connecting all official profiles, press mentions, and Google Knowledge Panel verification.",
+          "quantity": 1,
+          "rate": 22000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 25960
+        }
+      ],
+      "notes": "Entity optimization delivered. Knowledge panel claimed and verified.",
+      "terms": "Payment due upon milestone verification.",
+      "taxRate": 18
+    },
+    "defaultProposal": {
+      "title": "Entity Graph Optimization & Semantic Brand Authority",
+      "summary": "Transforming your company into an unambiguous, recognized entity in Google Knowledge Vault to secure a Google Knowledge Panel and dominate branded search.",
+      "scopeOfWork": [
+        "Semantic entity audit identifying disambiguation conflicts",
+        "Wikidata entry drafting and cross-referencing with verified sources",
+        "Full Schema.org entity graph connecting founders, headquarters & services",
+        "Google Knowledge Panel claiming and official representative verification"
+      ],
+      "sections": [
+        {
+          "id": "sec-1",
+          "title": "Entity Over Keywords",
+          "content": "Modern search algorithms rank entities, not just strings of keywords. Entity status protects your brand from competitors and establishes unshakeable trust."
+        },
+        {
+          "id": "sec-2",
+          "title": "Knowledge Panel Impact",
+          "content": "A verified Knowledge Panel on Google search grants immediate prestige and 80%+ click-through rate on branded terms."
+        },
+        {
+          "id": "sec-3",
+          "title": "Verification Timeline",
+          "content": "4-week structured process aligning off-page citations and on-page semantic schema."
+        }
+      ],
+      "milestones": [
+        {
+          "id": "m-1",
+          "title": "Semantic Entity Mapping",
+          "duration": "Week 1",
+          "cost": 18000,
+          "deliverable": "Entity blueprint & disambiguation matrix"
+        },
+        {
+          "id": "m-2",
+          "title": "Wikidata & Entity Schema Setup",
+          "duration": "Weeks 2-3",
+          "cost": 20000,
+          "deliverable": "Live Schema.org graph & verified references"
+        },
+        {
+          "id": "m-3",
+          "title": "Knowledge Panel Claiming",
+          "duration": "Week 4",
+          "cost": 12000,
+          "deliverable": "Verified Knowledge Panel and SERP authority"
+        }
+      ],
+      "pricingItems": [
+        {
+          "id": "p-1",
+          "title": "Entity Disambiguation & Matrix",
+          "quantity": 1,
+          "rate": 18000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 21240
+        },
+        {
+          "id": "p-2",
+          "title": "Semantic Knowledge Schema Engine",
+          "quantity": 1,
+          "rate": 20000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 23600
+        },
+        {
+          "id": "p-3",
+          "title": "Knowledge Panel Verification Sprint",
+          "quantity": 1,
+          "rate": 12000,
+          "discountPercent": 0,
+          "taxPercent": 18,
+          "amount": 14160
+        }
+      ],
+      "terms": "50% upfront, 50% upon verified knowledge graph indexation."
+    }
+  }
+]

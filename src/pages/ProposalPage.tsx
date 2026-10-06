@@ -63,29 +63,29 @@ export const ProposalPage: React.FC<ProposalPageProps> = ({
     new Date(Date.now() + 30 * 86400000).toISOString().split('T')[0]
   );
   const [formSelectedServices, setFormSelectedServices] = useState<string[]>([
-    preselectedService ? preselectedService.title : 'Web Design & Development'
+    preselectedService ? preselectedService.title : 'Business Websites'
   ]);
   const [formMilestones, setFormMilestones] = useState<ProposalMilestone[]>([
     {
       id: `m-1`,
       title: 'Phase 1: Discovery, Wireframing & Technical Architecture',
-      duration: '2 Weeks',
-      cost: 4500,
-      deliverable: 'Figma Design System, Database Schemas, API Specs'
+      duration: '5 Days',
+      cost: 25000,
+      deliverable: 'Figma prototypes and approved sitemap'
     },
     {
       id: `m-2`,
-      title: 'Phase 2: Core Engineering, AI Integrations & 3D Spatial Canvas',
-      duration: '4 Weeks',
-      cost: 7500,
-      deliverable: 'Staging Environment, Interactive Three.js WebGL & Supabase Sync'
+      title: 'Phase 2: Frontend Engineering & CMS Build',
+      duration: '7 Days',
+      cost: 35000,
+      deliverable: 'Staging environment with live CMS'
     },
     {
       id: `m-3`,
-      title: 'Phase 3: Production Deployment, PHPMailer & Launch Blitz',
-      duration: '2 Weeks',
-      cost: 3500,
-      deliverable: 'Live Production Flagship, Automated SMTP Triggers, Handoff Docs'
+      title: 'Phase 3: QA, Domain DNS & Final Launch',
+      duration: '3 Days',
+      cost: 15000,
+      deliverable: 'Live URL with 95+ Google PageSpeed score'
     }
   ]);
 
@@ -272,6 +272,7 @@ export const ProposalPage: React.FC<ProposalPageProps> = ({
           initialProposal={editingProposalForGenerator}
           clients={clients}
           smtpConfig={smtpConfig}
+          preselectedService={preselectedService}
           onSave={(prop) => {
             onSaveProposal(prop);
             setActiveViewMode('funnel');
@@ -536,10 +537,10 @@ export const ProposalPage: React.FC<ProposalPageProps> = ({
                 />
               </div>
 
-              {/* Service Selection from 25 DigiCoyotes Capabilities */}
+              {/* Service Selection from Digital Coyotes Capabilities */}
               <div className="space-y-1.5 pt-2 border-t border-slate-800">
                 <label className="text-slate-400 block font-mono">
-                  Bundle DigiCoyotes Capabilities (Click to toggle):
+                  Bundle Capabilities ({DIGICOYOTES_SERVICES.length} Available):
                 </label>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5 max-h-36 overflow-y-auto p-2 rounded-lg bg-slate-950 border border-slate-800">
                   {DIGICOYOTES_SERVICES.map((svc) => {
